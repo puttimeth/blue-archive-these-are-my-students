@@ -1,0 +1,23 @@
+.control-panel {
+  position: relative;
+  z-index: 1000;
+  padding: 1rem;
+  height: min-content;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #eeeeee;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+  }
+}
