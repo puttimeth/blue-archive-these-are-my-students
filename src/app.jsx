@@ -1,5 +1,4 @@
 import "./app.scss";
-import Aru from "./images/students/10000.webp";
 import { message, Modal } from "antd";
 import { Header, HelpPanel } from "component";
 import { ControlPanel } from "component/control-panel";
@@ -81,7 +80,6 @@ function App() {
       </Modal>
       <div className="app">
         <div className="bg-image" />
-        <img src={Aru} alt="aru" />
         <Header
           deckState={deckState}
           setConfigModalStatus={setConfigModalStatus}
@@ -146,7 +144,7 @@ function App() {
               return ownedFilter && favFilter && starFilter && squadTypeFilter;
             })
             .map((studentId) => {
-              const imgName = "images/students/" + studentId + ".webp";
+              const imgName = "/students/" + studentId + ".webp";
 
               return (
                 <div
