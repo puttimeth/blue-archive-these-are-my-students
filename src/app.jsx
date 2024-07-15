@@ -144,7 +144,10 @@ function App() {
               return ownedFilter && favFilter && starFilter && squadTypeFilter;
             })
             .map((studentId) => {
-              const imgName = "/students/" + studentId + ".webp";
+              let imgName =
+                "/blue-archive-these-are-my-students/students/" +
+                studentId +
+                ".webp";
 
               return (
                 <div
