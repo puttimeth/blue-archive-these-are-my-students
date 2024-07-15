@@ -183,7 +183,7 @@ function App() {
                       <MdOutlineStarBorder />
                     )}
                   </button>
-                  <img src={new URL(imgName, import.meta.url)} alt="" />
+                  <img src={imgName} alt="" />
                   <span>
                     {studentLng === "en"
                       ? studentData[studentId].nameEn
