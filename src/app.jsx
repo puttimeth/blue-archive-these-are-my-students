@@ -81,6 +81,7 @@ function App() {
       </Modal>
       <div className="app">
         <div className="bg-image" />
+        <img src={Aru} alt="aru" />
         <Header
           deckState={deckState}
           setConfigModalStatus={setConfigModalStatus}
