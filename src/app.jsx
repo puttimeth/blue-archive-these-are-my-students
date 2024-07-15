@@ -1,4 +1,5 @@
 import "./app.scss";
+import Aru from "./images/students/10000.webp";
 import { message, Modal } from "antd";
 import { Header, HelpPanel } from "component";
 import { ControlPanel } from "component/control-panel";
