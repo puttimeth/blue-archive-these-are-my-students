@@ -14,6 +14,7 @@ export const ControlPanel = ({
 }) => {
   return (
     <div className="control-panel">
+      {/* Status */}
       <div>
         <span>Status</span>
         <div>
@@ -37,6 +38,7 @@ export const ControlPanel = ({
           </Button>
         </div>
       </div>
+      {/* Star */}
       <div>
         <span>Star</span>
         <div>
@@ -84,6 +86,7 @@ export const ControlPanel = ({
           </Button>
         </div>
       </div>
+      {/* Squad Type */}
       <div>
         <span>Squad Type</span>
         <div>
@@ -109,6 +112,7 @@ export const ControlPanel = ({
           </Button>
         </div>
       </div>
+      {/* Language */}
       <div>
         <span>Student's Name Language</span>
         <div>
@@ -116,6 +120,7 @@ export const ControlPanel = ({
             type={studentLng === "en" ? "primary" : "default"}
             onClick={() => {
               setStudentLng("en");
+              localStorage.setItem("lng", "en");
             }}
           >
             EN
@@ -124,6 +129,7 @@ export const ControlPanel = ({
             type={studentLng === "th" ? "primary" : "default"}
             onClick={() => {
               setStudentLng("th");
+              localStorage.setItem("lng", "th");
             }}
           >
             TH

@@ -14,7 +14,9 @@ function App() {
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
-  const [studentLng, setStudentLng] = useState("en"); // support "en" and "th"
+  const [studentLng, setStudentLng] = useState(() => {
+    return localStorage.getItem("lng") ?? "en";
+  }); // support "en" and "th"
 
   useEffect(() => {
     // fetch state from params if possible
