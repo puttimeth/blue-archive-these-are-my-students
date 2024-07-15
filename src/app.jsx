@@ -11,8 +11,9 @@ function App() {
   const [deckState, setDeckState] = useState();
   // filter config
   const [studentOwned, setStudentOwned] = useState(""); // empty = don't use, "owned" = show only owned students, "not owned" = show only not owned students
-  const [studentStar, setStudentStar] = useState([]); // empty = don't use, item in array can be "1★", "2★" or "3★"
+  const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
+  // sort config
   const [studentLng, setStudentLng] = useState("en"); // support "en" and "th"
 
   useEffect(() => {
@@ -35,10 +36,55 @@ function App() {
     <div className="app">
       <div className="bg-image" />
       <Header deckState={deckState} />
-      <ControlPanel studentLng={studentLng} setStudentLng={setStudentLng} />
+      <ControlPanel
+        studentOwned={studentOwned}
+        setStudentOwned={setStudentOwned}
+        studentStar={studentStar}
+        setStudentStar={setStudentStar}
+        studentSquadType={studentSquadType}
+        setStudentSquadType={setStudentSquadType}
+        studentLng={studentLng}
+        setStudentLng={setStudentLng}
+      />
       <div className="deck">
-        {(studentLng === "en" ? studentEnSortData : studentThSortData).map(
-          (studentId) => {
+        {(studentLng === "en" ? studentEnSortData : studentThSortData)
+          .filter((studentId) => {
+            // filter student
+            // owned
+            let ownedFilter = true;
+            if (studentOwned !== "") {
+              if (studentOwned === "owned" && !deckState[studentId].owned)
+                ownedFilter = false;
+              else if (
+                studentOwned === "not owned" &&
+                deckState[studentId].owned
+              )
+                ownedFilter = false;
+            }
+            // star
+            let starFilter = true;
+            if (studentStar.size > 0) {
+              if (!studentStar.has(studentData[studentId].defaultStar))
+                starFilter = false;
+            }
+            // squad type
+            let squadTypeFilter = true;
+            if (studentSquadType !== "") {
+              if (
+                studentSquadType === "striker" &&
+                studentData[studentId].squadType !== "Main"
+              )
+                squadTypeFilter = false;
+              else if (
+                studentSquadType === "special" &&
+                studentData[studentId].squadType !== "Support"
+              )
+                squadTypeFilter = false;
+            }
+            // summary
+            return ownedFilter && starFilter && squadTypeFilter;
+          })
+          .map((studentId) => {
             const imgName = "images/students/" + studentId + ".webp";
 
             return (
@@ -62,8 +108,7 @@ function App() {
                 </span>
               </button>
             );
-          },
-        )}
+          })}
       </div>
     </div>
   );
