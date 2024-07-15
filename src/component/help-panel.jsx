@@ -19,6 +19,10 @@ export const HelpPanel = ({ studentLng }) => (
           background behind the student's name.
         </span>
         <span>
+          Click on the ★ icon at the top-right of the student card to mark it as
+          a favorite.
+        </span>
+        <span>
           The control panel is located on the left side. If you're on mobile,
           tap the config button at top-left to open it.
         </span>
@@ -28,7 +32,7 @@ export const HelpPanel = ({ studentLng }) => (
           are supported.
         </span>
         <span>
-          You can filter student cards using the control panel. There are 3
+          You can filter student cards using the control panel. There are 5
           options available.
         </span>
         <span>
@@ -51,6 +55,10 @@ export const HelpPanel = ({ studentLng }) => (
             สีเขียว
           </span>{" "}
           หลังชื่อ
+        </span>
+        <span>
+          กดที่ไอคอนรูป ★
+          มุมขวาบนของภาพนักเรียนเพื่อทำเครื่องหมายว่าเป็นรายการโปรด
         </span>
         <span>
           แผงควบคุมอยู่ฝั่งซ้ายของจอ หรือถ้าคุณใช้มือถือ

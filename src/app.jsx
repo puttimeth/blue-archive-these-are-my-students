@@ -13,6 +13,7 @@ function App() {
   const [deckState, setDeckState] = useState();
   // filter config
   const [studentOwned, setStudentOwned] = useState(""); // empty = don't use, "owned" = show only owned students, "not owned" = show only not owned students
+  const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
@@ -57,6 +58,8 @@ function App() {
           isDesktop={false}
           studentOwned={studentOwned}
           setStudentOwned={setStudentOwned}
+          studentFav={studentFav}
+          setStudentFav={setStudentFav}
           studentStar={studentStar}
           setStudentStar={setStudentStar}
           studentSquadType={studentSquadType}
@@ -85,6 +88,8 @@ function App() {
         <ControlPanel
           studentOwned={studentOwned}
           setStudentOwned={setStudentOwned}
+          studentFav={studentFav}
+          setStudentFav={setStudentFav}
           studentStar={studentStar}
           setStudentStar={setStudentStar}
           studentSquadType={studentSquadType}
@@ -107,6 +112,14 @@ function App() {
                 )
                   ownedFilter = false;
               }
+              // favorite
+              let favFilter = true;
+              if (studentFav !== "") {
+                if (studentFav === "fav" && !deckState[studentId].fav)
+                  favFilter = false;
+                else if (studentFav === "not fav" && deckState[studentId].fav)
+                  favFilter = false;
+              }
               // star
               let starFilter = true;
               if (studentStar.size > 0) {
@@ -128,7 +141,7 @@ function App() {
                   squadTypeFilter = false;
               }
               // summary
-              return ownedFilter && starFilter && squadTypeFilter;
+              return ownedFilter && favFilter && starFilter && squadTypeFilter;
             })
             .map((studentId) => {
               const imgName = "images/students/" + studentId + ".webp";

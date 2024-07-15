@@ -6,6 +6,8 @@ export const ControlPanel = ({
   isDesktop = true,
   studentOwned,
   setStudentOwned,
+  studentFav,
+  setStudentFav,
   studentStar,
   setStudentStar,
   studentSquadType,
@@ -36,6 +38,28 @@ export const ControlPanel = ({
             }}
           >
             Not Owned
+          </Button>
+        </div>
+      </div>
+      {/* Favorite Status */}
+      <div>
+        <span>Favorite Status</span>
+        <div>
+          <Button
+            type={studentFav === "fav" ? "primary" : "default"}
+            onClick={() => {
+              setStudentFav((prev) => (prev === "fav" ? "" : "fav"));
+            }}
+          >
+            Favorite
+          </Button>
+          <Button
+            type={studentFav === "not fav" ? "primary" : "default"}
+            onClick={() => {
+              setStudentFav((prev) => (prev === "not fav" ? "" : "not fav"));
+            }}
+          >
+            Not Favorite
           </Button>
         </div>
       </div>
