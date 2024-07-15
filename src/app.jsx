@@ -1,6 +1,6 @@
 import "./app.scss";
 import { message, Modal } from "antd";
-import { Header, HelpPanel } from "component";
+import { Footer, Header, HelpPanel } from "component";
 import { ControlPanel } from "component/control-panel";
 import { studentData, studentEnSortData, studentThSortData } from "data";
 import React, { useEffect, useState } from "react";
@@ -194,6 +194,7 @@ function App() {
             })}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
