@@ -11,11 +11,7 @@ export const Header = ({
 }) => {
   const copyShareLinkToClipBoard = () => {
     const base64String = deckStateToBase64(deckState);
-    navigator.clipboard.writeText(
-      window.location.origin +
-        "/blue-archive-these-are-my-students/" +
-        base64String,
-    );
+    navigator.clipboard.writeText(window.location.origin + "/" + base64String);
     message.info("Shareable link is copied to clipboard.");
   };
 

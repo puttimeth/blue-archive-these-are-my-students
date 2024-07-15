@@ -3,7 +3,6 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/blue-archive-these-are-my-students/",
   css: {
     modules: {
       localsConvention: "camelCaseOnly",
