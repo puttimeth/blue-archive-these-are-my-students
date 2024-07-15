@@ -12,11 +12,7 @@ export const HelpPanel = ({ studentLng }) => (
         </span>
         <span>
           Click on a student card to mark that student as owned. This will
-          display a{" "}
-          <span style={{ color: "#ffffff", backgroundColor: "#00a854" }}>
-            green
-          </span>{" "}
-          background behind the student's name.
+          display a green background behind the student's name.
         </span>
         <span>
           Click on the ★ icon at the top-right of the student card to mark it as
@@ -50,11 +46,7 @@ export const HelpPanel = ({ studentLng }) => (
         </span>
         <span>
           กดที่รูปนักเรียนเพื่อติ๊กว่ามีนักเรียนคนนั้นแล้ว
-          นักเรียนที่ขึ้นว่ามีจะมีพื้นหลัง
-          <span style={{ color: "#ffffff", backgroundColor: "#00a854" }}>
-            สีเขียว
-          </span>{" "}
-          หลังชื่อ
+          นักเรียนที่ขึ้นว่ามีจะมีพื้นหลังสีเขียวหลังชื่อ
         </span>
         <span>
           กดที่ไอคอนรูป ★
