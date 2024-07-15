@@ -4,10 +4,41 @@
   top: 0;
   left: 0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   height: 3rem;
   width: 100%;
   padding: 0.5rem;
   box-sizing: border-box;
   background-color: #eeeeee;
+
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .config-btn {
+    display: none;
+  }
+
+  > div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .header {
+    justify-content: space-between;
+
+    .config-btn {
+      display: inline-flex;
+    }
+  }
 }

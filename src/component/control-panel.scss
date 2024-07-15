@@ -21,3 +21,13 @@
     }
   }
 }
+
+.antd-modal-control-panel .ant-modal-content {
+  background-color: #eeeeee;
+}
+
+@media only screen and (max-width: 650px) {
+  .control-panel.desktop {
+    display: none;
+  }
+}

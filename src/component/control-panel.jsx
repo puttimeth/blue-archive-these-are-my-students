@@ -3,6 +3,7 @@ import { Button } from "antd";
 import React from "react";
 
 export const ControlPanel = ({
+  isDesktop = true,
   studentOwned,
   setStudentOwned,
   studentStar,
@@ -13,10 +14,10 @@ export const ControlPanel = ({
   setStudentLng,
 }) => {
   return (
-    <div className="control-panel">
-      {/* Status */}
+    <div className={`control-panel ${isDesktop ? "desktop" : ""}`}>
+      {/* Owned Status */}
       <div>
-        <span>Status</span>
+        <span>Owned Status</span>
         <div>
           <Button
             type={studentOwned === "owned" ? "primary" : "default"}

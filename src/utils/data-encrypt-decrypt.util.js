@@ -51,24 +51,38 @@ export const base64ToBinaryString = (base64String) => {
 export const deckStateToBase64 = (deckState) => {
   // convert deck state to binary string
   let ownedString = "";
+  let favString = "";
   const deckKey = Object.keys(deckState);
   deckKey.sort();
   for (let item of deckKey) {
     ownedString += deckState[item].owned ? "1" : "0";
+    favString += deckState[item].fav ? "1" : "0";
   }
   // convert binary string to base64
-  const base64String = binaryStringToBase64(ownedString);
-  return base64String;
+  const ownedBase64String = binaryStringToBase64(ownedString);
+  const favBase64String = binaryStringToBase64(favString);
+  return (
+    ownedBase64String +
+    (favString.split("").some((e) => e === "1") ? favBase64String : "")
+  );
 };
 
 export const base64ToDeckState = (base64String, deckStateKeys) => {
+  if (base64String.length !== 32 && base64String.length !== 64)
+    return "Bad link.";
   // convert base64 to binary string
-  const binaryString = base64ToBinaryString(base64String);
-  console.log({ binaryString });
+  const ownedBinaryString = base64ToBinaryString(base64String.slice(0, 32));
+  let favBinaryString = "";
+  if (base64String.length === 64) {
+    favBinaryString = base64ToBinaryString(base64String.slice(32, -1));
+  }
   // convert binary string to deck state
   let deckState = {};
   for (let [idx, item] of deckStateKeys.entries()) {
-    deckState[item] = { owned: binaryString[idx] === "1" ? true : false };
+    deckState[item] = {
+      owned: ownedBinaryString[idx] === "1" ? true : false,
+      fav: favBinaryString?.[idx] === "1" ? true : false,
+    };
   }
   return deckState;
 };

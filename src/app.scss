@@ -27,9 +27,12 @@
   display: grid;
   grid-template-columns: repeat(6, 100px);
   gap: 1rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   .card {
     position: relative;
+    z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -40,10 +43,34 @@
     cursor: pointer;
     box-sizing: border-box;
     background-color: #262626;
-    transition: all 0.25s;
+    transition: background-color 0.25s;
 
     &.owned {
       background-color: #00a854;
+    }
+
+    > button {
+      position: absolute;
+      z-index: 1001;
+      top: 4px;
+      right: 4px;
+      padding: 4px;
+      border: 0;
+      border-radius: 3rem;
+      width: 23px;
+      height: 23px;
+      background-color: #eeeeee;
+      transition: background-color 0.25s;
+      cursor: pointer;
+
+      &.fav {
+        background-color: #fdda0d;
+      }
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
     }
 
     > img {
@@ -65,6 +92,40 @@
       box-sizing: border-box;
       font-size: 18px;
       color: #ffffff;
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .deck {
+    grid-template-columns: repeat(5, 100px);
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .deck {
+    grid-template-columns: repeat(4, 100px);
+    gap: 0.5rem;
+
+    .card > span {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .deck {
+    grid-template-columns: repeat(3, 100px);
+    gap: 4px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .deck {
+    grid-template-columns: repeat(3, 80px);
+
+    .card > img {
+      width: 80px;
     }
   }
 }
