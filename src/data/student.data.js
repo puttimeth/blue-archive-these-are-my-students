@@ -1887,7 +1887,7 @@ export const studentThSortData = [
   "20020",
 ];
 
-export const defaultOrderSortData = [
+export const studentDefaultOrderSortData = [
   "10000",
   "10001",
   "10002",

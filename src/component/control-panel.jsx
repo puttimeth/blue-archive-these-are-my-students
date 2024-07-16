@@ -4,6 +4,8 @@ import React from "react";
 
 export const ControlPanel = ({
   isDesktop = true,
+  studentSortedBy,
+  setStudentSortedBy,
   studentOwned,
   setStudentOwned,
   studentFav,
@@ -17,6 +19,28 @@ export const ControlPanel = ({
 }) => {
   return (
     <div className={`control-panel ${isDesktop ? "desktop" : ""}`}>
+      {/* Sorted By */}
+      <div>
+        <span>Sorted By</span>
+        <div>
+          <Button
+            type={studentSortedBy === "name" ? "primary" : "default"}
+            onClick={() => {
+              setStudentSortedBy("name");
+            }}
+          >
+            Name
+          </Button>
+          <Button
+            type={studentSortedBy === "release date" ? "primary" : "default"}
+            onClick={() => {
+              setStudentSortedBy("release date");
+            }}
+          >
+            Release Date
+          </Button>
+        </div>
+      </div>
       {/* Owned Status */}
       <div>
         <span>Owned Status</span>

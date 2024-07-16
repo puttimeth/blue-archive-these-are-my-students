@@ -2,7 +2,12 @@ import "./app.scss";
 import { message, Modal } from "antd";
 import { Footer, Header, HelpPanel } from "component";
 import { ControlPanel } from "component/control-panel";
-import { studentData, studentEnSortData, studentThSortData } from "data";
+import {
+  studentDefaultOrderSortData,
+  studentData,
+  studentEnSortData,
+  studentThSortData,
+} from "data";
 import React, { useEffect, useState } from "react";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
 import { useParams } from "react-router-dom";
@@ -12,6 +17,7 @@ function App() {
   const { ds } = useParams();
   const [deckState, setDeckState] = useState();
   // filter config
+  const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
   const [studentOwned, setStudentOwned] = useState(""); // empty = don't use, "owned" = show only owned students, "not owned" = show only not owned students
   const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
@@ -60,6 +66,8 @@ function App() {
       >
         <ControlPanel
           isDesktop={false}
+          studentSortedBy={studentSortedBy}
+          setStudentSortedBy={setStudentSortedBy}
           studentOwned={studentOwned}
           setStudentOwned={setStudentOwned}
           studentFav={studentFav}
@@ -90,6 +98,8 @@ function App() {
           setHelpModalStatus={setHelpModalStatus}
         />
         <ControlPanel
+          studentSortedBy={studentSortedBy}
+          setStudentSortedBy={setStudentSortedBy}
           studentOwned={studentOwned}
           setStudentOwned={setStudentOwned}
           studentFav={studentFav}
@@ -102,7 +112,12 @@ function App() {
           setStudentLng={setStudentLng}
         />
         <div className="deck">
-          {(studentLng === "en" ? studentEnSortData : studentThSortData)
+          {(studentSortedBy === "name"
+            ? studentLng === "en"
+              ? studentEnSortData
+              : studentThSortData
+            : studentDefaultOrderSortData
+          )
             .filter((studentId) => {
               // filter student
               // owned
