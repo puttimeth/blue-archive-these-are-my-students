@@ -17,12 +17,12 @@ function App() {
   const { ds } = useParams();
   const [deckState, setDeckState] = useState();
   // filter config
-  const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
   const [studentOwned, setStudentOwned] = useState(""); // empty = don't use, "owned" = show only owned students, "not owned" = show only not owned students
   const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
+  const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
   const [studentLng, setStudentLng] = useState(() => {
     return localStorage.getItem("lng") ?? "en";
   }); // support "en" and "th"
@@ -39,7 +39,7 @@ function App() {
   };
 
   useEffect(() => {
-    // fetch state from params if possible
+    // fetch state from params if possible, else init empty deck
     if (ds) {
       const newDeckState = base64ToDeckState(ds);
       if (typeof newDeckState === "string") {
@@ -55,6 +55,7 @@ function App() {
 
   return (
     <>
+      {/* Mobile Control Panel */}
       <Modal
         title={null}
         open={configModalStatus}
@@ -80,6 +81,7 @@ function App() {
           setStudentLng={setStudentLng}
         />
       </Modal>
+      {/* Help Modal */}
       <Modal
         title={null}
         open={helpModalStatus}
@@ -97,6 +99,7 @@ function App() {
           setConfigModalStatus={setConfigModalStatus}
           setHelpModalStatus={setHelpModalStatus}
         />
+        {/* Desktop Control Panel */}
         <ControlPanel
           studentSortedBy={studentSortedBy}
           setStudentSortedBy={setStudentSortedBy}
@@ -111,61 +114,63 @@ function App() {
           studentLng={studentLng}
           setStudentLng={setStudentLng}
         />
+        {/* Parent of student Card, called Deck. */}
         <div className="deck">
-          {(studentSortedBy === "name"
-            ? studentLng === "en"
-              ? studentEnSortData
-              : studentThSortData
-            : studentDefaultOrderSortData
-          )
-            .filter((studentId) => {
-              // filter student
-              // owned
-              let ownedFilter = true;
-              if (studentOwned !== "") {
-                if (studentOwned === "owned" && !deckState[studentId].owned)
-                  ownedFilter = false;
-                else if (
-                  studentOwned === "not owned" &&
-                  deckState[studentId].owned
-                )
-                  ownedFilter = false;
-              }
-              // favorite
-              let favFilter = true;
-              if (studentFav !== "") {
-                if (studentFav === "fav" && !deckState[studentId].fav)
-                  favFilter = false;
-                else if (studentFav === "not fav" && deckState[studentId].fav)
-                  favFilter = false;
-              }
-              // star
-              let starFilter = true;
-              if (studentStar.size > 0) {
-                if (!studentStar.has(studentData[studentId].defaultStar))
-                  starFilter = false;
-              }
-              // squad type
-              let squadTypeFilter = true;
-              if (studentSquadType !== "") {
-                if (
-                  studentSquadType === "striker" &&
-                  studentData[studentId].squadType !== "Main"
-                )
-                  squadTypeFilter = false;
-                else if (
-                  studentSquadType === "special" &&
-                  studentData[studentId].squadType !== "Support"
-                )
-                  squadTypeFilter = false;
-              }
-              // summary
-              return ownedFilter && favFilter && starFilter && squadTypeFilter;
-            })
-            .map((studentId) => {
-              let imgName = "/students/" + studentId + ".webp";
-
-              return (
+          {
+            // choose SortData to be used
+            (studentSortedBy === "name"
+              ? studentLng === "en"
+                ? studentEnSortData
+                : studentThSortData
+              : studentDefaultOrderSortData
+            )
+              .filter((studentId) => {
+                // filter student
+                // owned
+                let ownedFilter = true;
+                if (studentOwned !== "") {
+                  if (studentOwned === "owned" && !deckState[studentId].owned)
+                    ownedFilter = false;
+                  else if (
+                    studentOwned === "not owned" &&
+                    deckState[studentId].owned
+                  )
+                    ownedFilter = false;
+                }
+                // favorite
+                let favFilter = true;
+                if (studentFav !== "") {
+                  if (studentFav === "fav" && !deckState[studentId].fav)
+                    favFilter = false;
+                  else if (studentFav === "not fav" && deckState[studentId].fav)
+                    favFilter = false;
+                }
+                // star
+                let starFilter = true;
+                if (studentStar.size > 0) {
+                  if (!studentStar.has(studentData[studentId].defaultStar))
+                    starFilter = false;
+                }
+                // squad type
+                let squadTypeFilter = true;
+                if (studentSquadType !== "") {
+                  if (
+                    studentSquadType === "striker" &&
+                    studentData[studentId].squadType !== "Main"
+                  )
+                    squadTypeFilter = false;
+                  else if (
+                    studentSquadType === "special" &&
+                    studentData[studentId].squadType !== "Support"
+                  )
+                    squadTypeFilter = false;
+                }
+                // summary
+                return (
+                  ownedFilter && favFilter && starFilter && squadTypeFilter
+                );
+              })
+              .map((studentId) => (
                 <div
                   key={studentId}
                   className={`card ${deckState?.[studentId]?.owned === true ? "owned" : ""}`}
@@ -202,15 +207,15 @@ function App() {
                       <MdOutlineStarBorder />
                     )}
                   </button>
-                  <img src={imgName} alt="" />
+                  <img src={`/students/${studentId}.webp`} alt="" />
                   <span>
                     {studentLng === "en"
                       ? studentData[studentId].nameEn
                       : studentData[studentId].nameTh}
                   </span>
                 </div>
-              );
-            })}
+              ))
+          }
         </div>
       </div>
       <Footer />

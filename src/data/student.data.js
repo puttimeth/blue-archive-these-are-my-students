@@ -1505,6 +1505,12 @@ export const studentData = {
   },
 };
 
+/**
+ * SortData is a collection of student id (keys of studentData object) that are sorted by various properties.
+ * These data can be sorted real-time but the data is the same every time so extract
+ * it as a new field reduce CPU workload. The downside is they must be updated everytime studentData
+ * is updated.
+ */
 export const studentEnSortData = [
   "23000",
   "16015",

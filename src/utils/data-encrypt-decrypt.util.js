@@ -39,6 +39,16 @@ export const base64ToBinaryString = (base64String) => {
   return binaryString;
 };
 
+/**
+ * Each student's state represents by two bit, one for isOwned, another for isFavorite.
+ *
+ * Student's state bit is concat together to create binary string. There are two binary string for isOwned and isFavorite.
+ *
+ * Binary string then divided into group 0f 6 bit. Each group encode into base64. Note that this base64 replace
+ * some character with valid characters for URL.
+ *
+ * If isFavorite binary string is all zero, it won't return to reduce total length.
+ */
 export const deckStateToBase64 = (deckState) => {
   // convert deck state to binary string
   let ownedString = "";
@@ -56,13 +66,22 @@ export const deckStateToBase64 = (deckState) => {
   );
 };
 
+/**
+ * Before convert base64 data back to binary string, the data need to be validated.
+ *
+ * Base64 have two possibilities, one is it contain both isOwned and isFavorite, another is it only contain isOwned.
+ *
+ * In the future, if studentData is growing, old base64 data can still be used and automatically recognize
+ * those new students as not owned and not favorite.
+ */
 export const base64ToDeckState = (base64String) => {
   const deckStateKeys = studentDefaultOrderSortData;
   // check base64 input
-  // check input length; there are two parts with equal length, then total length must be even
-  if (base64String.length % 2 === 1) return "Bad link.";
-  // check length per part; the number of students can only increased, length per part must be less than or equal current size
   const maxSizePerPart = Math.ceil(deckStateKeys.length / 6); // number of students divided by bits of base64
+  // check input length; there are two parts with equal length, then total length must be even
+  if (base64String.length > maxSizePerPart && base64String.length % 2 === 1)
+    return "Bad link.";
+  // check length per part; the number of students can only increased, length per part must be less than or equal current size
   const sizePerPart = base64String.length / 2;
   if (sizePerPart > maxSizePerPart) return "Bad link.";
   // check content is base64 encoding
