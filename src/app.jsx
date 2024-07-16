@@ -24,22 +24,26 @@ function App() {
   const [configModalStatus, setConfigModalStatus] = useState(false);
   const [helpModalStatus, setHelpModalStatus] = useState(false);
 
+  const initEmptyDeck = () => {
+    let state = {};
+    for (let id of Object.keys(studentData)) {
+      state[id] = { owned: false, fav: false };
+    }
+    setDeckState(state);
+  };
+
   useEffect(() => {
     // fetch state from params if possible
     if (ds) {
       const newDeckState = base64ToDeckState(ds, Object.keys(studentData));
       if (typeof newDeckState === "string") {
         message.error(newDeckState);
+        initEmptyDeck();
       } else {
         setDeckState(newDeckState);
       }
     } else {
-      // initialize deck state
-      let state = {};
-      for (let id of Object.keys(studentData)) {
-        state[id] = { owned: false, fav: false };
-      }
-      setDeckState(state);
+      initEmptyDeck();
     }
   }, []);
 

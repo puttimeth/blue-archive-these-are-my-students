@@ -1,48 +1,37 @@
+// Base64 character set
+const base64Chars =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+
 export const binaryStringToBase64 = (binaryString) => {
-  // padding the end with 0 to make length multiple of 8
-  while (binaryString.length % 8 !== 0) {
+  // Ensure binary string is padded to a multiple of 6 bits
+  while (binaryString.length % 6 !== 0) {
     binaryString += "0";
   }
 
-  let byteArray = [];
-  // Convert binary string to byte array
-  for (let i = 0; i < binaryString.length; i += 8) {
-    let byte = binaryString.slice(i, i + 8);
-    byteArray.push(parseInt(byte, 2));
+  // Convert binary string to Base64
+  let base64 = "";
+  for (let i = 0; i < binaryString.length; i += 6) {
+    let chunk = binaryString.slice(i, i + 6); // Take 6-bit chunk
+    let decimalValue = parseInt(chunk, 2); // Convert binary to decimal
+    base64 += base64Chars[decimalValue]; // Map decimal value to Base64 character
   }
 
-  // Convert byte array to string
-  let byteString = String.fromCharCode(...byteArray);
-
-  // Encode string to Base64
-  let base64String = btoa(byteString);
-
-  // Make Base64 URL-safe
-  base64String = base64String
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
-
-  return base64String;
+  return base64;
 };
 
 export const base64ToBinaryString = (base64String) => {
-  // Restore Base64 padding
-  let paddingLength = (4 - (base64String.length % 4)) % 4;
-  let base64Padded = base64String + "=".repeat(paddingLength);
-
-  // Restore URL-safe characters to Base64 characters
-  base64Padded = base64Padded.replace(/-/g, "+").replace(/_/g, "/");
-
-  // Decode Base64 to byte string
-  let byteString = atob(base64Padded);
-
-  // Convert byte string to binary string
   let binaryString = "";
-  for (let i = 0; i < byteString.length; i++) {
-    let byte = byteString.charCodeAt(i).toString(2);
-    // Pad each byte with leading zeros to ensure it's 8 bits
-    binaryString += byte.padStart(8, "0");
+
+  // Iterate over each character in the Base64 string
+  for (let base64Char of base64String.split("")) {
+    // Find the index of the Base64 character in the character set
+    let base64Index = base64Chars.indexOf(base64Char);
+
+    // Convert the index to a 6-bit binary string
+    let binaryChunk = ("000000" + base64Index.toString(2)).slice(-6);
+
+    // Append the 6-bit binary string to the result
+    binaryString += binaryChunk;
   }
 
   return binaryString;
@@ -68,19 +57,34 @@ export const deckStateToBase64 = (deckState) => {
 };
 
 export const base64ToDeckState = (base64String, deckStateKeys) => {
-  if (base64String.length !== 32 && base64String.length !== 64)
+  // check base64 input
+  // check input length; there are two parts with equal length, then total length must be even
+  if (base64String.length % 2 === 1) return "Bad link.";
+  // check length per part; the number of students can only increased, length per part must be less than or equal current size
+  const maxSizePerPart = Math.ceil(deckStateKeys.length / 6); // number of students divided by bits of base64
+  const sizePerPart = base64String.length / 2;
+  if (sizePerPart > maxSizePerPart) return "Bad link.";
+  // check content is base64 encoding
+  if (base64String.split("").some((e) => !base64Chars.includes(e)))
     return "Bad link.";
+
   // convert base64 to binary string
-  const ownedBinaryString = base64ToBinaryString(base64String.slice(0, 32));
+  let ownedBinaryString = "";
   let favBinaryString = "";
-  if (base64String.length === 64) {
-    favBinaryString = base64ToBinaryString(base64String.slice(32, -1));
+  if (base64String.length <= maxSizePerPart) {
+    ownedBinaryString = base64ToBinaryString(base64String);
+  } else {
+    ownedBinaryString = base64ToBinaryString(
+      base64String.slice(0, sizePerPart),
+    );
+    favBinaryString = base64ToBinaryString(base64String.slice(sizePerPart, -1));
   }
+
   // convert binary string to deck state
   let deckState = {};
   for (let [idx, item] of deckStateKeys.entries()) {
     deckState[item] = {
-      owned: ownedBinaryString[idx] === "1" ? true : false,
+      owned: ownedBinaryString?.[idx] === "1" ? true : false,
       fav: favBinaryString?.[idx] === "1" ? true : false,
     };
   }
