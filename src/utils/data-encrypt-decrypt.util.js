@@ -97,7 +97,7 @@ export const base64ToDeckState = (base64String) => {
     ownedBinaryString = base64ToBinaryString(
       base64String.slice(0, sizePerPart),
     );
-    favBinaryString = base64ToBinaryString(base64String.slice(sizePerPart, -1));
+    favBinaryString = base64ToBinaryString(base64String.slice(sizePerPart));
   }
 
   // convert binary string to deck state
