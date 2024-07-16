@@ -23,7 +23,7 @@ export const HelpPanel = ({ studentLng }) => (
           tap the config button at top-left to open it.
         </span>
         <span>
-          Student cards are sorted alphabetically by name. You can select your
+          Student cards can sorted alphabetically by name. You can select your
           preferred language in the control panel. Currently, English and Thai
           are supported.
         </span>
@@ -57,8 +57,8 @@ export const HelpPanel = ({ studentLng }) => (
           แตะที่ปุ่มฟันเฟืองมุมซ้ายบนเพื่อเปิดแผงควบคุม
         </span>
         <span>
-          นักเรียนที่แสดงออกมาถูกเรียงตามชื่อโดยอัตโนมัติ
-          สามารถแตะเพื่อเลือกภาษาที่จะใช้แสดงชื่อนักเรียนได้ที่แผงควบคุม
+          คุณสามารถเลือกเรียงนักเรียนตามชื่อ
+          โดยสามารถแตะเพื่อเลือกภาษาที่จะใช้แสดงชื่อนักเรียนได้ที่แผงควบคุม
         </span>
         <span>ใช้ปุ่มในแผงควบคุมเพื่อเลือกแสดงนักเรียนเฉพาะบางคน</span>
         <span>
