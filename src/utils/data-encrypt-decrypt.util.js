@@ -1,3 +1,5 @@
+import { defaultOrderSortData } from "data";
+
 // Base64 character set
 const base64Chars =
   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
@@ -41,9 +43,7 @@ export const deckStateToBase64 = (deckState) => {
   // convert deck state to binary string
   let ownedString = "";
   let favString = "";
-  const deckKey = Object.keys(deckState);
-  deckKey.sort();
-  for (let item of deckKey) {
+  for (let item of defaultOrderSortData) {
     ownedString += deckState[item].owned ? "1" : "0";
     favString += deckState[item].fav ? "1" : "0";
   }
@@ -56,7 +56,8 @@ export const deckStateToBase64 = (deckState) => {
   );
 };
 
-export const base64ToDeckState = (base64String, deckStateKeys) => {
+export const base64ToDeckState = (base64String) => {
+  const deckStateKeys = defaultOrderSortData;
   // check base64 input
   // check input length; there are two parts with equal length, then total length must be even
   if (base64String.length % 2 === 1) return "Bad link.";

@@ -35,7 +35,7 @@ function App() {
   useEffect(() => {
     // fetch state from params if possible
     if (ds) {
-      const newDeckState = base64ToDeckState(ds, Object.keys(studentData));
+      const newDeckState = base64ToDeckState(ds);
       if (typeof newDeckState === "string") {
         message.error(newDeckState);
         initEmptyDeck();
