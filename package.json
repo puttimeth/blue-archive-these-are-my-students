@@ -2,6 +2,7 @@
   "name": "blue-archive-these-are-my-students",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "antd": "^5.8.2",
@@ -17,7 +18,8 @@
     "create-env": "printenv > .env",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "format": "prettier --write \"./**/*.{js,jsx,css,scss,json}\""
+    "format": "prettier --write \"./**/*.{js,jsx,css,scss,json}\"",
+    "sort-order": "node ./src/utils/student-order-sorting.util.js"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
