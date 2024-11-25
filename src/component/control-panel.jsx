@@ -197,48 +197,24 @@ export const ControlPanel = ({
       {/* Ticket */}
       <div>
         <span>Ticket</span>
-        {[...Array(Math.ceil(Object.keys(ticketData).length / 2))].map(
-          (_, idx) => {
-            const ticketKeys = Object.keys(ticketData);
-            const ticket1 = ticketKeys[idx * 2];
-            const ticket2 = ticketKeys[idx * 2 + 1];
-
-            return (
-              <div key={idx}>
-                <Button
-                  type={studentTicket.has(ticket1) ? "primary" : "default"}
-                  onClick={() => {
-                    let s = new Set(studentTicket);
-                    if (studentTicket.has(ticket1)) {
-                      s.delete(ticket1);
-                    } else {
-                      s.add(ticket1);
-                    }
-                    setStudentTicket(s);
-                  }}
-                >
-                  {ticket1}
-                </Button>
-                {ticket2 && (
-                  <Button
-                    type={studentTicket.has(ticket2) ? "primary" : "default"}
-                    onClick={() => {
-                      let s = new Set(studentTicket);
-                      if (studentTicket.has(ticket2)) {
-                        s.delete(ticket2);
-                      } else {
-                        s.add(ticket2);
-                      }
-                      setStudentTicket(s);
-                    }}
-                  >
-                    {ticket2}
-                  </Button>
-                )}
-              </div>
-            );
-          },
-        )}
+        {Object.keys(ticketData).map((ticket) => (
+          <div key={ticket}>
+            <Button
+              type={studentTicket.has(ticket) ? "primary" : "default"}
+              onClick={() => {
+                let s = new Set(studentTicket);
+                if (studentTicket.has(ticket)) {
+                  s.delete(ticket);
+                } else {
+                  s.add(ticket);
+                }
+                setStudentTicket(s);
+              }}
+            >
+              {ticket}
+            </Button>
+          </div>
+        ))}
       </div>
       {/* Squad Type */}
       <div>
