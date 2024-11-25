@@ -2,6 +2,7 @@ import "./control-panel.scss";
 import { Button } from "antd";
 import { ticketData } from "data";
 import React from "react";
+import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
 
 const StarButton = ({ studentStar, setStudentStar, starValue }) => {
   return (
@@ -216,6 +217,13 @@ export const ControlPanel = ({
             >
               {ticket}
             </Button>
+            {studentTicket?.[ticket] === 0 && <div style={{ width: "20px" }} />}
+            {studentTicket?.[ticket] === 1 && (
+              <PiPlusSquare size={20} color="#198754" />
+            )}
+            {studentTicket?.[ticket] === 2 && (
+              <PiMinusSquare size={20} color="#ff4d4f" />
+            )}
           </div>
         ))}
       </div>
