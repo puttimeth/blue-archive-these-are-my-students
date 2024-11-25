@@ -1,5 +1,6 @@
 import "./control-panel.scss";
 import { Button } from "antd";
+import { ticketData } from "data";
 import React from "react";
 
 const StarButton = ({ studentStar, setStudentStar, starValue }) => {
@@ -56,6 +57,8 @@ export const ControlPanel = ({
   setStudentStar,
   studentAvailability,
   setStudentAvailability,
+  studentTicket,
+  setStudentTicket,
   studentSquadType,
   setStudentSquadType,
   studentLng,
@@ -190,6 +193,52 @@ export const ControlPanel = ({
             availabilityValue="Fest"
           />
         </div>
+      </div>
+      {/* Ticket */}
+      <div>
+        <span>Ticket</span>
+        {[...Array(Math.ceil(Object.keys(ticketData).length / 2))].map(
+          (_, idx) => {
+            const ticketKeys = Object.keys(ticketData);
+            const ticket1 = ticketKeys[idx * 2];
+            const ticket2 = ticketKeys[idx * 2 + 1];
+
+            return (
+              <div key={idx}>
+                <Button
+                  type={studentTicket.has(ticket1) ? "primary" : "default"}
+                  onClick={() => {
+                    let s = new Set(studentTicket);
+                    if (studentTicket.has(ticket1)) {
+                      s.delete(ticket1);
+                    } else {
+                      s.add(ticket1);
+                    }
+                    setStudentTicket(s);
+                  }}
+                >
+                  {ticket1}
+                </Button>
+                {ticket2 && (
+                  <Button
+                    type={studentTicket.has(ticket2) ? "primary" : "default"}
+                    onClick={() => {
+                      let s = new Set(studentTicket);
+                      if (studentTicket.has(ticket2)) {
+                        s.delete(ticket2);
+                      } else {
+                        s.add(ticket2);
+                      }
+                      setStudentTicket(s);
+                    }}
+                  >
+                    {ticket2}
+                  </Button>
+                )}
+              </div>
+            );
+          },
+        )}
       </div>
       {/* Squad Type */}
       <div>

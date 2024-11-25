@@ -7,6 +7,7 @@ import {
   studentData,
   studentEnSortData,
   studentThSortData,
+  ticketData,
 } from "data";
 import React, { useEffect, useState } from "react";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
@@ -27,6 +28,7 @@ function App() {
   const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
   const [studentAvailability, setStudentAvailability] = useState(new Set()); // empty = don't use, item in array can be "Permanent", "Unique", "Event" or "Fest"
+  const [studentTicket, setStudentTicket] = useState(new Set()); // empty = don't use, item in array can be keys of ticketData
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
@@ -108,6 +110,15 @@ function App() {
         if (!studentAvailability.has(studentData[studentId].availability))
           starFilter = false;
       }
+      // ticket
+      let ticketFilter = true;
+      if (studentTicket.size > 0) {
+        let studentIdPool = new Set();
+        for (let ticket of studentTicket) {
+          studentIdPool = studentIdPool.union(ticketData[ticket]);
+        }
+        if (!studentIdPool.has(studentId)) ticketFilter = false;
+      }
       // squad type
       let squadTypeFilter = true;
       if (studentSquadType !== "") {
@@ -120,6 +131,7 @@ function App() {
         favFilter &&
         starFilter &&
         availabilityFilter &&
+        ticketFilter &&
         squadTypeFilter
       );
     });
@@ -132,6 +144,7 @@ function App() {
     studentFav,
     studentStar,
     studentAvailability,
+    studentTicket,
     studentSquadType,
   ]);
 
@@ -159,6 +172,8 @@ function App() {
           setStudentStar={setStudentStar}
           studentAvailability={studentAvailability}
           setStudentAvailability={setStudentAvailability}
+          studentTicket={studentTicket}
+          setStudentTicket={setStudentTicket}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}
@@ -199,6 +214,8 @@ function App() {
           setStudentStar={setStudentStar}
           studentAvailability={studentAvailability}
           setStudentAvailability={setStudentAvailability}
+          studentTicket={studentTicket}
+          setStudentTicket={setStudentTicket}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}
