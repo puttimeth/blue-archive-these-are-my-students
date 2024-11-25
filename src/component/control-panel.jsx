@@ -1,6 +1,6 @@
 import "./control-panel.scss";
 import { Button } from "antd";
-import { ticketData } from "data";
+import { shopData, ticketData } from "data";
 import React from "react";
 import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
 
@@ -60,6 +60,8 @@ export const ControlPanel = ({
   setStudentAvailability,
   studentTicket,
   setStudentTicket,
+  studentShop,
+  setStudentShop,
   studentSquadType,
   setStudentSquadType,
   studentLng,
@@ -222,6 +224,38 @@ export const ControlPanel = ({
               <PiPlusSquare size={20} color="#198754" />
             )}
             {studentTicket?.[ticket] === 2 && (
+              <PiMinusSquare size={20} color="#ff4d4f" />
+            )}
+          </div>
+        ))}
+      </div>
+      {/* Shop */}
+      <div>
+        <span>Shop</span>
+        {Object.keys(shopData).map((shop) => (
+          <div key={shop}>
+            <Button
+              className={
+                studentShop?.[shop] === 1
+                  ? "green"
+                  : studentShop?.[shop] === 2
+                    ? "red"
+                    : "default"
+              }
+              onClick={() => {
+                let newValue = studentShop?.[shop] ?? 0;
+                newValue += 1;
+                if (newValue > 2) newValue = 0;
+                setStudentShop((prev) => ({ ...prev, [shop]: newValue }));
+              }}
+            >
+              {shop}
+            </Button>
+            {studentShop?.[shop] === 0 && <div style={{ width: "20px" }} />}
+            {studentShop?.[shop] === 1 && (
+              <PiPlusSquare size={20} color="#198754" />
+            )}
+            {studentShop?.[shop] === 2 && (
               <PiMinusSquare size={20} color="#ff4d4f" />
             )}
           </div>

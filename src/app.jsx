@@ -8,6 +8,7 @@ import {
   studentEnSortData,
   studentThSortData,
   ticketData,
+  shopData,
 } from "data";
 import React, { useEffect, useState } from "react";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
@@ -29,6 +30,7 @@ function App() {
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
   const [studentAvailability, setStudentAvailability] = useState(new Set()); // empty = don't use, item in array can be "Permanent", "Unique", "Event" or "Fest"
   const [studentTicket, setStudentTicket] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
+  const [studentShop, setStudentShop] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
@@ -51,11 +53,18 @@ function App() {
 
   useEffect(() => {
     setNoStudent(studentDefaultOrderSortData.length);
+    // initialize ticket
     let newStudentTicket = {};
     for (let ticket of Object.keys(ticketData)) {
       newStudentTicket[ticket] = 0;
     }
     setStudentTicket(newStudentTicket);
+    // initialize shop
+    let newStudentShop = {};
+    for (let shop of Object.keys(shopData)) {
+      newStudentShop[shop] = 0;
+    }
+    setStudentShop(newStudentShop);
     // fetch state from params if possible, else init empty deck
     if (ds) {
       const newDeckState = base64ToDeckState(ds);
@@ -132,6 +141,23 @@ function App() {
         let studentIdPool = unionPool.difference(differencePool);
         if (!studentIdPool.has(studentId)) ticketFilter = false;
       }
+      // shop
+      let shopFilter = true;
+      if (Object.values(studentShop).some((e) => e !== 0)) {
+        let unionPool = new Set();
+        let differencePool = new Set();
+        for (let [shop, value] of Object.entries(studentShop)) {
+          if (value === 1) {
+            unionPool = unionPool.union(shopData[shop]);
+          } else if (value === 2) {
+            differencePool = differencePool.union(shopData[shop]);
+          }
+        }
+        if (unionPool.size === 0)
+          unionPool = new Set(studentDefaultOrderSortData);
+        let studentIdPool = unionPool.difference(differencePool);
+        if (!studentIdPool.has(studentId)) shopFilter = false;
+      }
       // squad type
       let squadTypeFilter = true;
       if (studentSquadType !== "") {
@@ -145,6 +171,7 @@ function App() {
         starFilter &&
         availabilityFilter &&
         ticketFilter &&
+        shopFilter &&
         squadTypeFilter
       );
     });
@@ -158,6 +185,7 @@ function App() {
     studentStar,
     studentAvailability,
     studentTicket,
+    studentShop,
     studentSquadType,
   ]);
 
@@ -197,6 +225,8 @@ function App() {
           setStudentAvailability={setStudentAvailability}
           studentTicket={studentTicket}
           setStudentTicket={setStudentTicket}
+          studentShop={studentShop}
+          setStudentShop={setStudentShop}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}
@@ -239,6 +269,8 @@ function App() {
           setStudentAvailability={setStudentAvailability}
           studentTicket={studentTicket}
           setStudentTicket={setStudentTicket}
+          studentShop={studentShop}
+          setStudentShop={setStudentShop}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}
