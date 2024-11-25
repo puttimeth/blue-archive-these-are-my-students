@@ -60,9 +60,16 @@ export const ControlPanel = ({
   setStudentSquadType,
   studentLng,
   setStudentLng,
+  noStudent,
+  noStudentShown,
+  noStudentOwned,
+  noStudentFav,
 }) => {
   return (
     <div className={`control-panel ${isDesktop ? "desktop" : ""}`}>
+      <span>
+        Show {noStudentShown}/{noStudent}
+      </span>
       {/* Sorted By */}
       <div>
         <span>Sorted By</span>
@@ -87,7 +94,9 @@ export const ControlPanel = ({
       </div>
       {/* Owned Status */}
       <div>
-        <span>Owned Status</span>
+        <span>
+          Owned ({noStudentOwned}/{noStudent})
+        </span>
         <div>
           <Button
             type={studentOwned === "owned" ? "primary" : "default"}
@@ -111,7 +120,9 @@ export const ControlPanel = ({
       </div>
       {/* Favorite Status */}
       <div>
-        <span>Favorite Status</span>
+        <span>
+          Favorite ({noStudentFav}/{noStudent})
+        </span>
         <div>
           <Button
             type={studentFav === "fav" ? "primary" : "default"}

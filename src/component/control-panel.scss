@@ -14,11 +14,19 @@
     flex-direction: column;
     gap: 4px;
 
+    > span {
+      font-size: 15px;
+    }
+
     > div {
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
     }
+  }
+
+  > span {
+    font-size: 15px;
   }
 }
 
