@@ -2,5 +2,6 @@
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "tabWidth": 2,
   "semi": true,
-  "importOrderSeparation": true
+  "importOrderSeparation": true,
+  "importOrderParserPlugins": ["importAssertions"]
 }

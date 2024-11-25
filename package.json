@@ -19,7 +19,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier --write \"./**/*.{js,jsx,css,scss,json}\"",
-    "sort-order": "node ./src/utils/student-order-sorting.util.js"
+    "sort-order": "node ./src/utils/student-order-sorting.util.js",
+    "extract-data": "node ./src/utils/student-data-extraction.util.js"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
