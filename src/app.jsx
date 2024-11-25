@@ -20,6 +20,7 @@ function App() {
   const [studentOwned, setStudentOwned] = useState(""); // empty = don't use, "owned" = show only owned students, "not owned" = show only not owned students
   const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
+  const [studentAvailability, setStudentAvailability] = useState(new Set()); // empty = don't use, item in array can be "Permanent", "Unique", "Event" or "Fest"
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
@@ -75,6 +76,8 @@ function App() {
           setStudentFav={setStudentFav}
           studentStar={studentStar}
           setStudentStar={setStudentStar}
+          studentAvailability={studentAvailability}
+          setStudentAvailability={setStudentAvailability}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}
@@ -109,6 +112,8 @@ function App() {
           setStudentFav={setStudentFav}
           studentStar={studentStar}
           setStudentStar={setStudentStar}
+          studentAvailability={studentAvailability}
+          setStudentAvailability={setStudentAvailability}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}
@@ -151,6 +156,16 @@ function App() {
                   if (!studentStar.has(studentData[studentId].defaultStar))
                     starFilter = false;
                 }
+                // availability
+                let availabilityFilter = true;
+                if (studentAvailability.size > 0) {
+                  if (
+                    !studentAvailability.has(
+                      studentData[studentId].availability,
+                    )
+                  )
+                    starFilter = false;
+                }
                 // squad type
                 let squadTypeFilter = true;
                 if (studentSquadType !== "") {
@@ -167,7 +182,11 @@ function App() {
                 }
                 // summary
                 return (
-                  ownedFilter && favFilter && starFilter && squadTypeFilter
+                  ownedFilter &&
+                  favFilter &&
+                  starFilter &&
+                  availabilityFilter &&
+                  squadTypeFilter
                 );
               })
               .map((studentId) => (

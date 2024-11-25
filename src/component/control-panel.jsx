@@ -2,6 +2,48 @@ import "./control-panel.scss";
 import { Button } from "antd";
 import React from "react";
 
+const StarButton = ({ studentStar, setStudentStar, starValue }) => {
+  return (
+    <Button
+      type={studentStar.has(starValue) ? "primary" : "default"}
+      onClick={() => {
+        let s = new Set(studentStar);
+        if (studentStar.has(starValue)) {
+          s.delete(starValue);
+        } else {
+          s.add(starValue);
+        }
+        setStudentStar(s);
+      }}
+    >
+      {starValue}★
+    </Button>
+  );
+};
+
+const AvailabilityButton = ({
+  studentAvailability,
+  setStudentAvailability,
+  availabilityValue,
+}) => {
+  return (
+    <Button
+      type={studentAvailability.has(availabilityValue) ? "primary" : "default"}
+      onClick={() => {
+        let s = new Set(studentAvailability);
+        if (studentAvailability.has(availabilityValue)) {
+          s.delete(availabilityValue);
+        } else {
+          s.add(availabilityValue);
+        }
+        setStudentAvailability(s);
+      }}
+    >
+      {availabilityValue}
+    </Button>
+  );
+};
+
 export const ControlPanel = ({
   isDesktop = true,
   studentSortedBy,
@@ -12,6 +54,8 @@ export const ControlPanel = ({
   setStudentFav,
   studentStar,
   setStudentStar,
+  studentAvailability,
+  setStudentAvailability,
   studentSquadType,
   setStudentSquadType,
   studentLng,
@@ -91,48 +135,49 @@ export const ControlPanel = ({
       <div>
         <span>Star</span>
         <div>
-          <Button
-            type={studentStar.has(1) ? "primary" : "default"}
-            onClick={() => {
-              let s = new Set(studentStar);
-              if (studentStar.has(1)) {
-                s.delete(1);
-              } else {
-                s.add(1);
-              }
-              setStudentStar(s);
-            }}
-          >
-            1★
-          </Button>
-          <Button
-            type={studentStar.has(2) ? "primary" : "default"}
-            onClick={() => {
-              let s = new Set(studentStar);
-              if (studentStar.has(2)) {
-                s.delete(2);
-              } else {
-                s.add(2);
-              }
-              setStudentStar(s);
-            }}
-          >
-            2★
-          </Button>
-          <Button
-            type={studentStar.has(3) ? "primary" : "default"}
-            onClick={() => {
-              let s = new Set(studentStar);
-              if (studentStar.has(3)) {
-                s.delete(3);
-              } else {
-                s.add(3);
-              }
-              setStudentStar(s);
-            }}
-          >
-            3★
-          </Button>
+          <StarButton
+            studentStar={studentStar}
+            setStudentStar={setStudentStar}
+            starValue={1}
+          />
+          <StarButton
+            studentStar={studentStar}
+            setStudentStar={setStudentStar}
+            starValue={2}
+          />
+          <StarButton
+            studentStar={studentStar}
+            setStudentStar={setStudentStar}
+            starValue={3}
+          />
+        </div>
+      </div>
+      {/* Availability */}
+      <div>
+        <span>Availability</span>
+        <div>
+          <AvailabilityButton
+            studentAvailability={studentAvailability}
+            setStudentAvailability={setStudentAvailability}
+            availabilityValue="Permanent"
+          />
+          <AvailabilityButton
+            studentAvailability={studentAvailability}
+            setStudentAvailability={setStudentAvailability}
+            availabilityValue="Unique"
+          />
+        </div>
+        <div>
+          <AvailabilityButton
+            studentAvailability={studentAvailability}
+            setStudentAvailability={setStudentAvailability}
+            availabilityValue="Event"
+          />
+          <AvailabilityButton
+            studentAvailability={studentAvailability}
+            setStudentAvailability={setStudentAvailability}
+            availabilityValue="Fest"
+          />
         </div>
       </div>
       {/* Squad Type */}
