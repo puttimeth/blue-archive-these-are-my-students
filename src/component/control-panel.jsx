@@ -185,20 +185,18 @@ export const ControlPanel = ({
         <span>Squad Type</span>
         <div>
           <Button
-            type={studentSquadType === "striker" ? "primary" : "default"}
+            type={studentSquadType === "Main" ? "primary" : "default"}
             onClick={() => {
-              setStudentSquadType((prev) =>
-                prev === "striker" ? "" : "striker",
-              );
+              setStudentSquadType((prev) => (prev === "Main" ? "" : "Main"));
             }}
           >
             Striker
           </Button>
           <Button
-            type={studentSquadType === "special" ? "primary" : "default"}
+            type={studentSquadType === "Support" ? "primary" : "default"}
             onClick={() => {
               setStudentSquadType((prev) =>
-                prev === "special" ? "" : "special",
+                prev === "Support" ? "" : "Support",
               );
             }}
           >

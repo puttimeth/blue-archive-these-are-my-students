@@ -169,15 +169,7 @@ function App() {
                 // squad type
                 let squadTypeFilter = true;
                 if (studentSquadType !== "") {
-                  if (
-                    studentSquadType === "striker" &&
-                    studentData[studentId].squadType !== "Main"
-                  )
-                    squadTypeFilter = false;
-                  else if (
-                    studentSquadType === "special" &&
-                    studentData[studentId].squadType !== "Support"
-                  )
+                  if (studentSquadType !== studentData[studentId].squadType)
                     squadTypeFilter = false;
                 }
                 // summary
