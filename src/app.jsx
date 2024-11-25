@@ -148,6 +148,16 @@ function App() {
     studentSquadType,
   ]);
 
+  // DEBUG; print id of students which are marked as owned
+  // useEffect(() => {
+  //   console.log(
+  //     deckState &&
+  //       Object.entries(deckState)
+  //         ?.filter?.(([_, data]) => data.owned === true)
+  //         ?.map?.(([idx, _]) => idx),
+  //   );
+  // }, [deckState]);
+
   return (
     <>
       {/* Mobile Control Panel */}
