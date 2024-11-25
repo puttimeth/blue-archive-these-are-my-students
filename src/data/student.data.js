@@ -404,7 +404,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Unique",
+    availability: "Fest",
     nameTh: "วาคาโมะ",
   },
   10034: {
@@ -548,7 +548,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Unique",
+    availability: "Fest",
     nameTh: "โฮชิโนะ (ชุดว่ายน้ำ)",
   },
   10046: {
@@ -716,7 +716,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Unique",
+    availability: "Fest",
     nameTh: "มิกะ",
   },
   10060: {
@@ -896,7 +896,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Unique",
+    availability: "Fest",
     nameTh: "ฮานาโกะ (ชุดว่ายน้ำ)",
   },
   10075: {
@@ -1040,7 +1040,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "ElasticArmor",
-    availability: "Unique",
+    availability: "Fest",
     nameTh: "ฮินะ (เดรส)",
   },
   10087: {
@@ -1184,7 +1184,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Unique",
+    availability: "Fest",
     nameTh: "โฮชิโนะ (พร้อมรบ)",
   },
   10100: {
@@ -1196,7 +1196,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Unique",
+    availability: "Fest",
     nameTh: "ชิโรโกะ (เทอเรอร์)",
   },
   10101: {
