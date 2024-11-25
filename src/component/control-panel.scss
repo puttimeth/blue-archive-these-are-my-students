@@ -28,6 +28,26 @@
   > span {
     font-size: 15px;
   }
+
+  button {
+    border: 0 !important;
+    box-shadow: none !important;
+
+    &.default {
+      color: #000000e0 !important;
+      background: #ffffff !important;
+    }
+
+    &.green {
+      color: #ffffff !important;
+      background: #198754 !important;
+    }
+
+    &.red {
+      color: #ffffff !important;
+      background: #ff4d4f !important;
+    }
+  }
 }
 
 .antd-modal-control-panel .ant-modal-content {

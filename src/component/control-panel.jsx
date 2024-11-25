@@ -200,15 +200,18 @@ export const ControlPanel = ({
         {Object.keys(ticketData).map((ticket) => (
           <div key={ticket}>
             <Button
-              type={studentTicket.has(ticket) ? "primary" : "default"}
+              className={
+                studentTicket?.[ticket] === 1
+                  ? "green"
+                  : studentTicket?.[ticket] === 2
+                    ? "red"
+                    : "default"
+              }
               onClick={() => {
-                let s = new Set(studentTicket);
-                if (studentTicket.has(ticket)) {
-                  s.delete(ticket);
-                } else {
-                  s.add(ticket);
-                }
-                setStudentTicket(s);
+                let newValue = studentTicket?.[ticket] ?? 0;
+                newValue += 1;
+                if (newValue > 2) newValue = 0;
+                setStudentTicket((prev) => ({ ...prev, [ticket]: newValue }));
               }}
             >
               {ticket}

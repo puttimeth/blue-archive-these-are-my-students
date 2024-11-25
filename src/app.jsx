@@ -28,7 +28,7 @@ function App() {
   const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
   const [studentAvailability, setStudentAvailability] = useState(new Set()); // empty = don't use, item in array can be "Permanent", "Unique", "Event" or "Fest"
-  const [studentTicket, setStudentTicket] = useState(new Set()); // empty = don't use, item in array can be keys of ticketData
+  const [studentTicket, setStudentTicket] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
@@ -51,6 +51,11 @@ function App() {
 
   useEffect(() => {
     setNoStudent(studentDefaultOrderSortData.length);
+    let newStudentTicket = {};
+    for (let ticket of Object.keys(ticketData)) {
+      newStudentTicket[ticket] = 0;
+    }
+    setStudentTicket(newStudentTicket);
     // fetch state from params if possible, else init empty deck
     if (ds) {
       const newDeckState = base64ToDeckState(ds);
@@ -112,11 +117,19 @@ function App() {
       }
       // ticket
       let ticketFilter = true;
-      if (studentTicket.size > 0) {
-        let studentIdPool = new Set();
-        for (let ticket of studentTicket) {
-          studentIdPool = studentIdPool.union(ticketData[ticket]);
+      if (Object.values(studentTicket).some((e) => e !== 0)) {
+        let unionPool = new Set();
+        let differencePool = new Set();
+        for (let [ticket, value] of Object.entries(studentTicket)) {
+          if (value === 1) {
+            unionPool = unionPool.union(ticketData[ticket]);
+          } else if (value === 2) {
+            differencePool = differencePool.union(ticketData[ticket]);
+          }
         }
+        if (unionPool.size === 0)
+          unionPool = new Set(studentDefaultOrderSortData);
+        let studentIdPool = unionPool.difference(differencePool);
         if (!studentIdPool.has(studentId)) ticketFilter = false;
       }
       // squad type
