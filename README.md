@@ -45,3 +45,13 @@ The detail of each value are listed in the table below
 | armorType | The student's defense type. <br>"LightArmor" = "Light", <br>"HeavyArmor" = "Heavy", <br>"Unarmed" = "Special", <br>"ElasticArmor" = "Elastic" |
 | availability | The recruit type of the student. <br>"Permanent" = Always available in the pool, <br>"Unique" = Only available in its pool, <br>"Event" = Can only obtain by the event, <br>"Fest" = Only available in the festival pool |
 | nameTh | The student's name in Thai |
+
+# Add new ticket
+
+Add, remove or update ticket can be done inside `/src/data/ticket.data.js/ticketData` object. The key of the object refers to the string that will be shown in the button. The value of the object must be `Set` which contain string of student's id.
+
+You can easily get list of student's id by enable debug code in `/src/app.jsx` (search with the keyword `DEBUG`). By enabling it, the console will print list of student's id marked as owned.
+
+# Add new shop
+
+Similar to [ticket section](#add-new-ticket).
