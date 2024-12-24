@@ -1,6 +1,6 @@
 import "./control-panel.scss";
 import { Button } from "antd";
-import { shopData, ticketData } from "data";
+import { shopData, ticketData, miscData } from "data";
 import React from "react";
 import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
 
@@ -62,6 +62,8 @@ export const ControlPanel = ({
   setStudentTicket,
   studentShop,
   setStudentShop,
+  studentMisc,
+  setStudentMisc,
   studentSquadType,
   setStudentSquadType,
   studentLng,
@@ -256,6 +258,38 @@ export const ControlPanel = ({
               <PiPlusSquare size={20} color="#198754" />
             )}
             {studentShop?.[shop] === 2 && (
+              <PiMinusSquare size={20} color="#ff4d4f" />
+            )}
+          </div>
+        ))}
+      </div>
+      {/* Misc */}
+      <div>
+        <span>Misc.</span>
+        {Object.keys(miscData).map((misc) => (
+          <div key={misc}>
+            <Button
+              className={
+                studentMisc?.[misc] === 1
+                  ? "green"
+                  : studentMisc?.[misc] === 2
+                    ? "red"
+                    : "default"
+              }
+              onClick={() => {
+                let newValue = studentMisc?.[misc] ?? 0;
+                newValue += 1;
+                if (newValue > 2) newValue = 0;
+                setStudentMisc((prev) => ({ ...prev, [misc]: newValue }));
+              }}
+            >
+              {misc}
+            </Button>
+            {studentMisc?.[misc] === 0 && <div style={{ width: "20px" }} />}
+            {studentMisc?.[misc] === 1 && (
+              <PiPlusSquare size={20} color="#198754" />
+            )}
+            {studentMisc?.[misc] === 2 && (
               <PiMinusSquare size={20} color="#ff4d4f" />
             )}
           </div>

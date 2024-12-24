@@ -9,6 +9,7 @@ import {
   studentThSortData,
   ticketData,
   shopData,
+  miscData,
 } from "data";
 import React, { useEffect, useState } from "react";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
@@ -31,6 +32,7 @@ function App() {
   const [studentAvailability, setStudentAvailability] = useState(new Set()); // empty = don't use, item in array can be "Permanent", "Unique", "Event" or "Fest"
   const [studentTicket, setStudentTicket] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
   const [studentShop, setStudentShop] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
+  const [studentMisc, setStudentMisc] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
@@ -65,6 +67,12 @@ function App() {
       newStudentShop[shop] = 0;
     }
     setStudentShop(newStudentShop);
+    // initialize misc
+    let newStudentMisc = {};
+    for (let misc of Object.keys(miscData)) {
+      newStudentMisc[misc] = 0;
+    }
+    setStudentMisc(newStudentMisc);
     // fetch state from params if possible, else init empty deck
     if (ds) {
       const newDeckState = base64ToDeckState(ds);
@@ -126,6 +134,22 @@ function App() {
         unionPool = new Set(studentDefaultOrderSortData);
       shopIdPool = unionPool.difference(differencePool);
     }
+    // generate misc student pool
+    let miscIdPool = undefined;
+    if (Object.values(studentMisc).some((e) => e !== 0)) {
+      let unionPool = new Set();
+      let differencePool = new Set();
+      for (let [misc, value] of Object.entries(studentMisc)) {
+        if (value === 1) {
+          unionPool = unionPool.union(miscData[misc]);
+        } else if (value === 2) {
+          differencePool = differencePool.union(miscData[misc]);
+        }
+      }
+      if (unionPool.size === 0)
+        unionPool = new Set(studentDefaultOrderSortData);
+      miscIdPool = unionPool.difference(differencePool);
+    }
     // apply filter
     targetStudents = targetStudents.filter((studentId) => {
       // filter student
@@ -165,6 +189,10 @@ function App() {
       let shopFilter = true;
       if (shopIdPool !== undefined && !shopIdPool.has(studentId))
         shopFilter = false;
+      // misc
+      let miscFilter = true;
+      if (miscIdPool !== undefined && !miscIdPool.has(studentId))
+        miscFilter = false;
       // squad type
       let squadTypeFilter = true;
       if (studentSquadType !== "") {
@@ -179,6 +207,7 @@ function App() {
         availabilityFilter &&
         ticketFilter &&
         shopFilter &&
+        miscFilter &&
         squadTypeFilter
       );
     });
@@ -193,6 +222,7 @@ function App() {
     studentAvailability,
     studentTicket,
     studentShop,
+    studentMisc,
     studentSquadType,
   ]);
 
@@ -234,6 +264,8 @@ function App() {
           setStudentTicket={setStudentTicket}
           studentShop={studentShop}
           setStudentShop={setStudentShop}
+          studentMisc={studentMisc}
+          setStudentMisc={setStudentMisc}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}
@@ -278,6 +310,8 @@ function App() {
           setStudentTicket={setStudentTicket}
           studentShop={studentShop}
           setStudentShop={setStudentShop}
+          studentMisc={studentMisc}
+          setStudentMisc={setStudentMisc}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
           studentLng={studentLng}

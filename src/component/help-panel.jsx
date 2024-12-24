@@ -28,7 +28,7 @@ export const HelpPanel = ({ studentLng }) => (
           are supported.
         </span>
         <span>
-          You can filter student cards using the control panel. There are 5
+          You can filter student cards using the control panel. There are 8
           options available.
         </span>
         <span>
