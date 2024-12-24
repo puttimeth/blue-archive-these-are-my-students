@@ -94,6 +94,39 @@ function App() {
           ? studentEnSortData
           : studentThSortData
         : studentDefaultOrderSortData;
+    // generate ticket student pool
+    let ticketIdPool = undefined;
+    if (Object.values(studentTicket).some((e) => e !== 0)) {
+      let unionPool = new Set();
+      let differencePool = new Set();
+      for (let [ticket, value] of Object.entries(studentTicket)) {
+        if (value === 1) {
+          unionPool = unionPool.union(ticketData[ticket]);
+        } else if (value === 2) {
+          differencePool = differencePool.union(ticketData[ticket]);
+        }
+      }
+      if (unionPool.size === 0)
+        unionPool = new Set(studentDefaultOrderSortData);
+      ticketIdPool = unionPool.difference(differencePool);
+    }
+    // generate shop student pool
+    let shopIdPool = undefined;
+    if (Object.values(studentShop).some((e) => e !== 0)) {
+      let unionPool = new Set();
+      let differencePool = new Set();
+      for (let [shop, value] of Object.entries(studentShop)) {
+        if (value === 1) {
+          unionPool = unionPool.union(shopData[shop]);
+        } else if (value === 2) {
+          differencePool = differencePool.union(shopData[shop]);
+        }
+      }
+      if (unionPool.size === 0)
+        unionPool = new Set(studentDefaultOrderSortData);
+      shopIdPool = unionPool.difference(differencePool);
+    }
+    // apply filter
     targetStudents = targetStudents.filter((studentId) => {
       // filter student
       // owned
@@ -126,38 +159,12 @@ function App() {
       }
       // ticket
       let ticketFilter = true;
-      if (Object.values(studentTicket).some((e) => e !== 0)) {
-        let unionPool = new Set();
-        let differencePool = new Set();
-        for (let [ticket, value] of Object.entries(studentTicket)) {
-          if (value === 1) {
-            unionPool = unionPool.union(ticketData[ticket]);
-          } else if (value === 2) {
-            differencePool = differencePool.union(ticketData[ticket]);
-          }
-        }
-        if (unionPool.size === 0)
-          unionPool = new Set(studentDefaultOrderSortData);
-        let studentIdPool = unionPool.difference(differencePool);
-        if (!studentIdPool.has(studentId)) ticketFilter = false;
-      }
+      if (ticketIdPool !== undefined && !ticketIdPool.has(studentId))
+        ticketFilter = false;
       // shop
       let shopFilter = true;
-      if (Object.values(studentShop).some((e) => e !== 0)) {
-        let unionPool = new Set();
-        let differencePool = new Set();
-        for (let [shop, value] of Object.entries(studentShop)) {
-          if (value === 1) {
-            unionPool = unionPool.union(shopData[shop]);
-          } else if (value === 2) {
-            differencePool = differencePool.union(shopData[shop]);
-          }
-        }
-        if (unionPool.size === 0)
-          unionPool = new Set(studentDefaultOrderSortData);
-        let studentIdPool = unionPool.difference(differencePool);
-        if (!studentIdPool.has(studentId)) shopFilter = false;
-      }
+      if (shopIdPool !== undefined && !shopIdPool.has(studentId))
+        shopFilter = false;
       // squad type
       let squadTypeFilter = true;
       if (studentSquadType !== "") {
