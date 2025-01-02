@@ -351,7 +351,6 @@ export const ControlPanel = ({
             type={studentLng === "en" ? "primary" : "default"}
             onClick={() => {
               setStudentLng("en");
-              localStorage.setItem("lng", "en");
             }}
           >
             EN
@@ -360,7 +359,6 @@ export const ControlPanel = ({
             type={studentLng === "th" ? "primary" : "default"}
             onClick={() => {
               setStudentLng("th");
-              localStorage.setItem("lng", "th");
             }}
           >
             TH

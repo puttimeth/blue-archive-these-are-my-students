@@ -39,9 +39,7 @@ function App() {
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
-  const [studentLng, setStudentLng] = useState(() => {
-    return localStorage.getItem("lng") ?? "en";
-  }); // support "en" and "th"
+  const [studentLng, setStudentLng] = useState("en"); // support "en" and "th"
   // modal status
   const [configModalStatus, setConfigModalStatus] = useState(false);
   const [helpModalStatus, setHelpModalStatus] = useState(false);
