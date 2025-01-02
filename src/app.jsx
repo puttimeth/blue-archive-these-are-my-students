@@ -56,6 +56,97 @@ function App() {
     setNoStudentFav(0);
   };
 
+  const initConfig = () => {
+    let currentConfig = localStorage.getItem("config");
+    if (!currentConfig) return;
+    currentConfig = JSON.parse(currentConfig);
+    if (currentConfig.studentServer) {
+      setStudentServer(currentConfig.studentServer);
+    }
+    if (currentConfig.studentOwned) {
+      setStudentOwned(currentConfig.studentOwned);
+    }
+    if (currentConfig.studentFav) {
+      setStudentFav(currentConfig.studentFav);
+    }
+    if (currentConfig.studentStar) {
+      setStudentStar(new Set(currentConfig.studentStar));
+    }
+    if (currentConfig.studentAvailability) {
+      setStudentAvailability(new Set(currentConfig.studentAvailability));
+    }
+    if (currentConfig.studentTicket) {
+      // remove key that didn't appear in data
+      let currentStudentTicket = {};
+      for (let key of Object.keys(currentConfig.studentTicket)) {
+        if (Object.keys(ticketData).includes(key)) {
+          currentStudentTicket = {
+            ...currentStudentTicket,
+            [key]: currentConfig.studentTicket[key],
+          };
+        }
+      }
+      setStudentTicket(currentStudentTicket);
+    }
+    if (currentConfig.studentShop) {
+      // remove key that didn't appear in data
+      let currentStudentShop = {};
+      for (let key of Object.keys(currentConfig.studentShop)) {
+        if (Object.keys(shopDataJp).includes(key)) {
+          currentStudentShop = {
+            ...currentStudentShop,
+            [key]: currentConfig.studentShop[key],
+          };
+        }
+      }
+      setStudentShop(currentStudentShop);
+    }
+    if (currentConfig.studentMisc) {
+      // remove key that didn't appear in data
+      let currentStudentMisc = {};
+      for (let key of Object.keys(currentConfig.studentMisc)) {
+        if (Object.keys(miscDataJp).includes(key)) {
+          currentStudentMisc = {
+            ...currentStudentMisc,
+            [key]: currentConfig.studentMisc[key],
+          };
+        }
+      }
+      setStudentMisc(currentStudentMisc);
+    }
+    if (currentConfig.studentSquadType) {
+      setStudentSquadType(currentConfig.studentSquadType);
+    }
+    if (currentConfig.studentSortedBy) {
+      setStudentSortedBy(currentConfig.studentSortedBy);
+    }
+    if (currentConfig.studentLng) {
+      setStudentLng(currentConfig.studentLng);
+    }
+  };
+
+  const saveConfig = () => {
+    const currentConfig = {
+      studentServer: studentServer,
+      studentOwned: studentOwned,
+      studentFav: studentFav,
+      studentStar: studentStar,
+      studentAvailability: studentAvailability,
+      studentTicket: studentTicket,
+      studentShop: studentShop,
+      studentMisc: studentMisc,
+      studentSquadType: studentSquadType,
+      studentSortedBy: studentSortedBy,
+      studentLng: studentLng,
+    };
+    localStorage.setItem(
+      "config",
+      JSON.stringify(currentConfig, (_, value) =>
+        value instanceof Set ? [...value] : value,
+      ),
+    );
+  };
+
   useEffect(() => {
     setNoStudent(studentDefaultOrderSortData.length);
     // initialize ticket
@@ -95,8 +186,28 @@ function App() {
     } else {
       initEmptyDeck();
     }
+    // initialize config from local storage
+    initConfig();
   }, []);
 
+  // useEffect for save config
+  useEffect(() => {
+    saveConfig();
+  }, [
+    studentServer,
+    studentOwned,
+    studentFav,
+    studentStar,
+    studentAvailability,
+    studentTicket,
+    studentShop,
+    studentMisc,
+    studentSquadType,
+    studentSortedBy,
+    studentLng,
+  ]);
+
+  // useEffect for updating student shown
   useEffect(() => {
     // choose SortData to be used
     let targetStudents =

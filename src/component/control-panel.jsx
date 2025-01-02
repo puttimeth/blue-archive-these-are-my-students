@@ -7,10 +7,10 @@ import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
 const StarButton = ({ studentStar, setStudentStar, starValue }) => {
   return (
     <Button
-      type={studentStar.has(starValue) ? "primary" : "default"}
+      type={studentStar?.has?.(starValue) ? "primary" : "default"}
       onClick={() => {
         let s = new Set(studentStar);
-        if (studentStar.has(starValue)) {
+        if (studentStar?.has?.(starValue)) {
           s.delete(starValue);
         } else {
           s.add(starValue);
