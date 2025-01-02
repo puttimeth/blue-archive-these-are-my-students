@@ -159,68 +159,50 @@ function App() {
     targetStudents = targetStudents.filter((studentId) => {
       // filter student
       // server
-      let serverFilter = true;
-      if (studentServer === "global") {
-        serverFilter = !(studentData[studentId].isJpOnly === true);
-      }
+      if (
+        studentServer === "global" &&
+        studentData[studentId].isJpOnly === true
+      )
+        return false;
       // owned
-      let ownedFilter = true;
-      if (studentOwned !== "") {
-        if (studentOwned === "owned" && !deckState[studentId].owned)
-          ownedFilter = false;
-        else if (studentOwned === "not owned" && deckState[studentId].owned)
-          ownedFilter = false;
-      }
+      if (
+        (studentOwned === "owned" && !deckState[studentId].owned) ||
+        (studentOwned === "not owned" && deckState[studentId].owned)
+      )
+        return false;
       // favorite
-      let favFilter = true;
-      if (studentFav !== "") {
-        if (studentFav === "fav" && !deckState[studentId].fav)
-          favFilter = false;
-        else if (studentFav === "not fav" && deckState[studentId].fav)
-          favFilter = false;
-      }
+      if (
+        (studentFav === "fav" && !deckState[studentId].fav) ||
+        (studentFav === "not fav" && deckState[studentId].fav)
+      )
+        return false;
       // star
-      let starFilter = true;
-      if (studentStar.size > 0) {
-        if (!studentStar.has(studentData[studentId].defaultStar))
-          starFilter = false;
-      }
+      if (
+        studentStar.size > 0 &&
+        !studentStar.has(studentData[studentId].defaultStar)
+      )
+        return false;
       // availability
-      let availabilityFilter = true;
-      if (studentAvailability.size > 0) {
-        if (!studentAvailability.has(studentData[studentId].availability))
-          starFilter = false;
-      }
+      if (
+        studentAvailability.size > 0 &&
+        !studentAvailability.has(studentData[studentId].availability)
+      )
+        return false;
       // ticket
-      let ticketFilter = true;
       if (ticketIdPool !== undefined && !ticketIdPool.has(studentId))
-        ticketFilter = false;
+        return false;
       // shop
-      let shopFilter = true;
-      if (shopIdPool !== undefined && !shopIdPool.has(studentId))
-        shopFilter = false;
+      if (shopIdPool !== undefined && !shopIdPool.has(studentId)) return false;
       // misc
-      let miscFilter = true;
-      if (miscIdPool !== undefined && !miscIdPool.has(studentId))
-        miscFilter = false;
+      if (miscIdPool !== undefined && !miscIdPool.has(studentId)) return false;
       // squad type
-      let squadTypeFilter = true;
-      if (studentSquadType !== "") {
-        if (studentSquadType !== studentData[studentId].squadType)
-          squadTypeFilter = false;
-      }
-      // summary
-      return (
-        serverFilter &&
-        ownedFilter &&
-        favFilter &&
-        starFilter &&
-        availabilityFilter &&
-        ticketFilter &&
-        shopFilter &&
-        miscFilter &&
-        squadTypeFilter
-      );
+      if (
+        studentSquadType !== "" &&
+        studentSquadType !== studentData[studentId].squadType
+      )
+        return false;
+      // pass all filter, return true
+      return true;
     });
     setFilteredStudents(targetStudents);
     setNoStudentShown(targetStudents.length);
