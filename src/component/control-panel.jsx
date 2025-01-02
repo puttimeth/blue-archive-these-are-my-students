@@ -1,6 +1,6 @@
 import "./control-panel.scss";
 import { Button } from "antd";
-import { shopData, ticketData, miscData } from "data";
+import { shopDataJp, ticketData, miscDataJp } from "data";
 import React from "react";
 import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
 
@@ -48,6 +48,8 @@ const AvailabilityButton = ({
 
 export const ControlPanel = ({
   isDesktop = true,
+  studentServer,
+  setStudentServer,
   studentSortedBy,
   setStudentSortedBy,
   studentOwned,
@@ -78,6 +80,28 @@ export const ControlPanel = ({
       <span>
         Show {noStudentShown}/{noStudent}
       </span>
+      {/* Server */}
+      <div>
+        <span>Server</span>
+        <div>
+          <Button
+            type={studentServer === "jp" ? "primary" : "default"}
+            onClick={() => {
+              setStudentServer("jp");
+            }}
+          >
+            JP
+          </Button>
+          <Button
+            type={studentServer === "global" ? "primary" : "default"}
+            onClick={() => {
+              setStudentServer("global");
+            }}
+          >
+            Global
+          </Button>
+        </div>
+      </div>
       {/* Sorted By */}
       <div>
         <span>Sorted By</span>
@@ -234,7 +258,7 @@ export const ControlPanel = ({
       {/* Shop */}
       <div>
         <span>Shop</span>
-        {Object.keys(shopData).map((shop) => (
+        {Object.keys(shopDataJp).map((shop) => (
           <div key={shop}>
             <Button
               className={
@@ -266,7 +290,7 @@ export const ControlPanel = ({
       {/* Misc */}
       <div>
         <span>Misc.</span>
-        {Object.keys(miscData).map((misc) => (
+        {Object.keys(miscDataJp).map((misc) => (
           <div key={misc}>
             <Button
               className={

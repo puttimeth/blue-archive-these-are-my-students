@@ -1174,6 +1174,7 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Permanent",
     nameTh: "โมเอะ (ชุดว่ายน้ำ)",
+    isJpOnly: true,
   },
   10098: {
     defaultOrder: 188,
@@ -1186,6 +1187,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Fest",
     nameTh: "โฮชิโนะ (พร้อมรบ)",
+    isJpOnly: true,
   },
   10100: {
     defaultOrder: 190,
@@ -1198,6 +1200,7 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Fest",
     nameTh: "ชิโรโกะ (เทอเรอร์)",
+    isJpOnly: true,
   },
   10101: {
     defaultOrder: 192,
@@ -1210,6 +1213,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "ซาโอริ (ชุดว่ายน้ำ)",
+    isJpOnly: true,
   },
   10102: {
     defaultOrder: 193,
@@ -1222,6 +1226,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "ฮิโยริ (ชุดว่ายน้ำ)",
+    isJpOnly: true,
   },
   10103: {
     defaultOrder: 194,
@@ -1234,6 +1239,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "มารินะ (กี่เพ้า)",
+    isJpOnly: true,
   },
   10104: {
     defaultOrder: 196,
@@ -1246,6 +1252,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "เรย์โจ",
+    isJpOnly: true,
   },
   10105: {
     defaultOrder: 198,
@@ -1258,6 +1265,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "มารี (ไอดอล)",
+    isJpOnly: true,
   },
   10106: {
     defaultOrder: 199,
@@ -1270,6 +1278,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "ซากุระโกะ (ไอดอล)",
+    isJpOnly: true,
   },
   10107: {
     defaultOrder: 201,
@@ -1282,6 +1291,7 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Permanent",
     nameTh: "จิอากิ",
+    isJpOnly: true,
   },
   10108: {
     defaultOrder: 203,
@@ -1294,6 +1304,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "ยูกะ (ชุดนอน)",
+    isJpOnly: true,
   },
   10109: {
     defaultOrder: 204,
@@ -1306,6 +1317,7 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Permanent",
     nameTh: "โนอา (ชุดนอน)",
+    isJpOnly: true,
   },
   13000: {
     defaultOrder: 14,
@@ -1678,6 +1690,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Event",
     nameTh: "มิเนะ (ไอดอล)",
+    isJpOnly: true,
   },
   20000: {
     defaultOrder: 30,
@@ -2146,6 +2159,7 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Permanent",
     nameTh: "โทโมเอะ (กี่เพ้า)",
+    isJpOnly: true,
   },
   20039: {
     defaultOrder: 197,
@@ -2158,6 +2172,7 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Permanent",
     nameTh: "คิซากิ",
+    isJpOnly: true,
   },
   20040: {
     defaultOrder: 202,
@@ -2170,6 +2185,7 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "ซัตสึกิ",
+    isJpOnly: true,
   },
   23000: {
     defaultOrder: 33,
@@ -2446,6 +2462,7 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Event",
     nameTh: "อาสึโกะ (ชุดว่ายน้ำ)",
+    isJpOnly: true,
   },
 };
 

@@ -8,8 +8,10 @@ import {
   studentEnSortData,
   studentThSortData,
   ticketData,
-  shopData,
-  miscData,
+  shopDataJp,
+  miscDataJp,
+  shopDataGlobal,
+  miscDataGlobal,
 } from "data";
 import React, { useEffect, useState } from "react";
 import { MdOutlineStar, MdOutlineStarBorder } from "react-icons/md";
@@ -26,6 +28,7 @@ function App() {
   const [noStudentFav, setNoStudentFav] = useState(0);
   const [noStudent, setNoStudent] = useState(0);
   // filter config
+  const [studentServer, setStudentServer] = useState("jp"); // value can be either "jp" or "global"
   const [studentOwned, setStudentOwned] = useState(""); // empty = don't use, "owned" = show only owned students, "not owned" = show only not owned students
   const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
   const [studentStar, setStudentStar] = useState(new Set()); // empty = don't use, item in array can be "1★", "2★" or "3★"
@@ -63,13 +66,13 @@ function App() {
     setStudentTicket(newStudentTicket);
     // initialize shop
     let newStudentShop = {};
-    for (let shop of Object.keys(shopData)) {
+    for (let shop of Object.keys(shopDataJp)) {
       newStudentShop[shop] = 0;
     }
     setStudentShop(newStudentShop);
     // initialize misc
     let newStudentMisc = {};
-    for (let misc of Object.keys(miscData)) {
+    for (let misc of Object.keys(miscDataJp)) {
       newStudentMisc[misc] = 0;
     }
     setStudentMisc(newStudentMisc);
@@ -120,6 +123,7 @@ function App() {
     }
     // generate shop student pool
     let shopIdPool = undefined;
+    let shopData = studentServer === "jp" ? shopDataJp : shopDataGlobal;
     if (Object.values(studentShop).some((e) => e !== 0)) {
       let unionPool = new Set();
       let differencePool = new Set();
@@ -136,6 +140,7 @@ function App() {
     }
     // generate misc student pool
     let miscIdPool = undefined;
+    let miscData = studentServer === "jp" ? miscDataJp : miscDataGlobal;
     if (Object.values(studentMisc).some((e) => e !== 0)) {
       let unionPool = new Set();
       let differencePool = new Set();
@@ -153,6 +158,11 @@ function App() {
     // apply filter
     targetStudents = targetStudents.filter((studentId) => {
       // filter student
+      // server
+      let serverFilter = true;
+      if (studentServer === "global") {
+        serverFilter = !(studentData[studentId].isJpOnly === true);
+      }
       // owned
       let ownedFilter = true;
       if (studentOwned !== "") {
@@ -201,6 +211,7 @@ function App() {
       }
       // summary
       return (
+        serverFilter &&
         ownedFilter &&
         favFilter &&
         starFilter &&
@@ -216,6 +227,7 @@ function App() {
   }, [
     studentSortedBy,
     studentLng,
+    studentServer,
     studentOwned,
     studentFav,
     studentStar,
@@ -250,6 +262,8 @@ function App() {
       >
         <ControlPanel
           isDesktop={false}
+          studentServer={studentServer}
+          setStudentServer={setStudentServer}
           studentSortedBy={studentSortedBy}
           setStudentSortedBy={setStudentSortedBy}
           studentOwned={studentOwned}
@@ -296,6 +310,8 @@ function App() {
         />
         {/* Desktop Control Panel */}
         <ControlPanel
+          studentServer={studentServer}
+          setStudentServer={setStudentServer}
           studentSortedBy={studentSortedBy}
           setStudentSortedBy={setStudentSortedBy}
           studentOwned={studentOwned}
