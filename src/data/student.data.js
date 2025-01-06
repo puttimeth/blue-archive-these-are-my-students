@@ -1174,7 +1174,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Permanent",
     nameTh: "โมเอะ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10098: {
     defaultOrder: 188,
