@@ -1177,7 +1177,7 @@ export const studentData = {
   },
   10098: {
     defaultOrder: 188,
-    nameEn: "Hoshino (Battle)",
+    nameEn: "Hoshino (Armed)",
     school: "Abydos",
     defaultStar: 3,
     squadType: "Main",
@@ -1185,7 +1185,7 @@ export const studentData = {
     bulletType: "Mystic",
     armorType: "HeavyArmor",
     availability: "Fest",
-    nameTh: "โฮชิโนะ (พร้อมรบ)",
+    nameTh: "โฮชิโนะ (คอมแบต)",
     isJpOnly: true,
   },
   10100: {
