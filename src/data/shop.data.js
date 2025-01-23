@@ -16,7 +16,7 @@ export const shopDataGlobal = {
   // prettier-ignore
   "Grand Raid boss": new Set(["10018", "10028", "10034", "20011", "20012"]),
   // prettier-ignore
-  "Arena": new Set(["20002", "20003", "23001", "23004", "23006"]),
+  "Arena": new Set(["10038", "20002", "20003", "23001", "23004", "23006"]),
   // prettier-ignore
   "Joint Firing Drill": new Set(["10001", "10012", "10013"]),
 };
