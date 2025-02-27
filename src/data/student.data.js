@@ -1210,7 +1210,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "ซาโอริ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10102: {
     defaultOrder: 193,
@@ -1223,7 +1222,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "ฮิโยริ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10103: {
     defaultOrder: 194,
@@ -2522,7 +2520,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Event",
     nameTh: "อาสึโกะ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   26014: {
     defaultOrder: 207,
