@@ -1236,7 +1236,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "มารินะ (กี่เพ้า)",
-    isJpOnly: true,
   },
   10104: {
     defaultOrder: 196,
@@ -2195,7 +2194,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Permanent",
     nameTh: "โทโมเอะ (กี่เพ้า)",
-    isJpOnly: true,
   },
   20039: {
     defaultOrder: 197,
