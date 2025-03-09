@@ -40,6 +40,7 @@ function App() {
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
   const [studentLng, setStudentLng] = useState("en"); // support "en" and "th"
+  const [isSortedByAscending, setIsSortedByAscending] = useState(true); // true = ascending, false = descending
   // modal status
   const [configModalStatus, setConfigModalStatus] = useState(false);
   const [helpModalStatus, setHelpModalStatus] = useState(false);
@@ -121,6 +122,9 @@ function App() {
     if (currentConfig.studentLng) {
       setStudentLng(currentConfig.studentLng);
     }
+    if (currentConfig.isSortedByAscending !== undefined) {
+      setIsSortedByAscending(currentConfig.isSortedByAscending);
+    }
   };
 
   const saveConfig = () => {
@@ -136,6 +140,7 @@ function App() {
       studentSquadType: studentSquadType,
       studentSortedBy: studentSortedBy,
       studentLng: studentLng,
+      isSortedByAscending: isSortedByAscending,
     };
     localStorage.setItem(
       "config",
@@ -203,6 +208,7 @@ function App() {
     studentSquadType,
     studentSortedBy,
     studentLng,
+    isSortedByAscending,
   ]);
 
   // useEffect for updating student shown
@@ -214,6 +220,9 @@ function App() {
           ? studentEnSortData
           : studentThSortData
         : studentDefaultOrderSortData;
+    if (isSortedByAscending === false) {
+      targetStudents = targetStudents.toReversed();
+    }
     // generate ticket student pool
     let ticketIdPool = undefined;
     if (Object.values(studentTicket).some((e) => e !== 0)) {
@@ -327,6 +336,7 @@ function App() {
     studentShop,
     studentMisc,
     studentSquadType,
+    isSortedByAscending,
   ]);
 
   // DEBUG; print id of students which are marked as owned
@@ -379,6 +389,8 @@ function App() {
           noStudentShown={noStudentShown}
           noStudentOwned={noStudentOwned}
           noStudentFav={noStudentFav}
+          isSortedByAscending={isSortedByAscending}
+          setIsSortedByAscending={setIsSortedByAscending}
         />
       </Modal>
       {/* Help Modal */}
@@ -427,6 +439,8 @@ function App() {
           noStudentShown={noStudentShown}
           noStudentOwned={noStudentOwned}
           noStudentFav={noStudentFav}
+          isSortedByAscending={isSortedByAscending}
+          setIsSortedByAscending={setIsSortedByAscending}
         />
         {/* Parent of student Card, called Deck. */}
         <div className="deck">

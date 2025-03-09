@@ -2,6 +2,7 @@ import "./control-panel.scss";
 import { Button } from "antd";
 import { shopDataJp, ticketData, miscDataJp } from "data";
 import React from "react";
+import { ImSortNumbericDesc, ImSortNumericAsc } from "react-icons/im";
 import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
 
 const StarButton = ({ studentStar, setStudentStar, starValue }) => {
@@ -74,6 +75,8 @@ export const ControlPanel = ({
   noStudentShown,
   noStudentOwned,
   noStudentFav,
+  isSortedByAscending,
+  setIsSortedByAscending,
 }) => {
   return (
     <div className={`control-panel ${isDesktop ? "desktop" : ""}`}>
@@ -106,6 +109,15 @@ export const ControlPanel = ({
       <div>
         <span>Sorted By</span>
         <div>
+          <Button
+            shape="circle"
+            onClick={() => {
+              setIsSortedByAscending((prev) => !prev);
+            }}
+          >
+            {isSortedByAscending === true && <ImSortNumericAsc />}
+            {isSortedByAscending === false && <ImSortNumbericDesc />}
+          </Button>
           <Button
             type={studentSortedBy === "name" ? "primary" : "default"}
             onClick={() => {
