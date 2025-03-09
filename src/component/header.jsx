@@ -1,20 +1,13 @@
 import "./header.scss";
-import { Button, message } from "antd";
+import { Button } from "antd";
 import React from "react";
 import { MdHelpOutline, MdOutlineSettings } from "react-icons/md";
-import { deckStateToBase64 } from "utils";
 
 export const Header = ({
-  deckState,
   setConfigModalStatus,
   setHelpModalStatus,
+  setDownloadModalStatus,
 }) => {
-  const copyShareLinkToClipBoard = () => {
-    const base64String = deckStateToBase64(deckState);
-    navigator.clipboard.writeText(window.location.origin + "/" + base64String);
-    message.info("Shareable link is copied to clipboard.");
-  };
-
   return (
     <div className="header">
       <Button
@@ -29,7 +22,7 @@ export const Header = ({
         <Button
           type="default"
           onClick={() => {
-            copyShareLinkToClipBoard();
+            setDownloadModalStatus(true);
           }}
         >
           Share

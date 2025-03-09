@@ -1,6 +1,6 @@
 import "./app.scss";
 import { message, Modal } from "antd";
-import { Footer, Header, HelpPanel } from "component";
+import { DownloadModal, Footer, Header, HelpPanel } from "component";
 import { ControlPanel } from "component/control-panel";
 import {
   studentDefaultOrderSortData,
@@ -44,6 +44,7 @@ function App() {
   // modal status
   const [configModalStatus, setConfigModalStatus] = useState(false);
   const [helpModalStatus, setHelpModalStatus] = useState(false);
+  const [downloadModalStatus, setDownloadModalStatus] = useState(false);
 
   const initEmptyDeck = () => {
     let state = {};
@@ -404,12 +405,20 @@ function App() {
       >
         <HelpPanel studentLng={studentLng} />
       </Modal>
+      {/* Download Modal */}
+      <DownloadModal
+        modalStatus={downloadModalStatus}
+        setModalStatus={setDownloadModalStatus}
+        deckState={deckState}
+        filteredStudents={filteredStudents}
+        studentLng={studentLng}
+      />
       <div className="app">
         <div className="bg-image" />
         <Header
-          deckState={deckState}
           setConfigModalStatus={setConfigModalStatus}
           setHelpModalStatus={setHelpModalStatus}
+          setDownloadModalStatus={setDownloadModalStatus}
         />
         {/* Desktop Control Panel */}
         <ControlPanel
