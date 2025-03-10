@@ -1,4 +1,4 @@
-import styles from "./download-modal.module.scss";
+import "./download-modal.scss";
 import { Button, Divider, Input, Modal } from "antd";
 import React, { useState } from "react";
 import {
@@ -26,7 +26,7 @@ export const DownloadModal = ({
         setModalStatus(false);
       }}
     >
-      <div className={styles["panel"]}>
+      <div className="download-panel">
         <span>
           The screenshot will only display the students you have filtered, and
           they will be sorted as shown.

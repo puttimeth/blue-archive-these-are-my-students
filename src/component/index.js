@@ -6,4 +6,4 @@ export * from "./footer";
 
 export * from "./header";
 
-export * from "./help-panel";
+export * from "./help-modal";

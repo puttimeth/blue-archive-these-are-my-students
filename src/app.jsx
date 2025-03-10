@@ -1,6 +1,6 @@
 import "./app.scss";
 import { message, Modal } from "antd";
-import { DownloadModal, Footer, Header, HelpPanel } from "component";
+import { DownloadModal, Footer, Header, HelpModal } from "component";
 import { ControlPanel } from "component/control-panel";
 import {
   studentDefaultOrderSortData,
@@ -395,16 +395,11 @@ function App() {
         />
       </Modal>
       {/* Help Modal */}
-      <Modal
-        title={null}
-        open={helpModalStatus}
-        footer={null}
-        onCancel={() => {
-          setHelpModalStatus(false);
-        }}
-      >
-        <HelpPanel studentLng={studentLng} />
-      </Modal>
+      <HelpModal
+        modalStatus={helpModalStatus}
+        setModalStatus={setHelpModalStatus}
+        studentLng={studentLng}
+      />
       {/* Download Modal */}
       <DownloadModal
         modalStatus={downloadModalStatus}
