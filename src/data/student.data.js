@@ -1258,7 +1258,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "มารี (ไอดอล)",
-    isJpOnly: true,
   },
   10106: {
     defaultOrder: 199,
@@ -1271,7 +1270,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "ซากุระโกะ (ไอดอล)",
-    isJpOnly: true,
   },
   10107: {
     defaultOrder: 201,
@@ -1774,7 +1772,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Event",
     nameTh: "มิเนะ (ไอดอล)",
-    isJpOnly: true,
   },
   20000: {
     defaultOrder: 30,
