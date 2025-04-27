@@ -20,7 +20,7 @@ for (let name of Object.keys(enNames).sort()) {
 
 // sort th
 // custom order that should be used in Thai
-const thCustomOrder = { เ: 0, แ: 1, โ: 2, ใ: 3, ไ: 4 };
+const thCustomOrder = { เ: 0, แ: 1, โ: 2, ใ: 3, ไ: 4, "*": 33 };
 const customSortKey = (word) => {
   return Array.from(word).map(
     (char) => thCustomOrder[char] ?? char.charCodeAt(0),
