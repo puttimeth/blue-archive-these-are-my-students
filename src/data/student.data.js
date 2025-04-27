@@ -1189,7 +1189,7 @@ export const studentData = {
   },
   10100: {
     defaultOrder: 190,
-    nameEn: "Shiroko Terror",
+    nameEn: "Shiroko*Terror",
     school: "Abydos",
     defaultStar: 3,
     squadType: "Main",
@@ -1197,7 +1197,7 @@ export const studentData = {
     bulletType: "Mystic",
     armorType: "Unarmed",
     availability: "Fest",
-    nameTh: "ชิโรโกะ (เทอเรอร์)",
+    nameTh: "ชิโรโกะ*เทอเรอร์",
   },
   10101: {
     defaultOrder: 192,
@@ -2957,9 +2957,9 @@ export const studentThSortData = [
   "13001",
   "10047",
   "10010",
-  "10100",
   "20027",
   "10024",
+  "10100",
   "10055",
   "20031",
   "23006",
