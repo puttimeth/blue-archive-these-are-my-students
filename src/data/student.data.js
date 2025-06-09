@@ -1294,7 +1294,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "ยูกะ (ชุดนอน)",
-    isJpOnly: true,
   },
   10109: {
     defaultOrder: 204,
@@ -1307,7 +1306,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Permanent",
     nameTh: "โนอา (ชุดนอน)",
-    isJpOnly: true,
   },
   10110: {
     defaultOrder: 205,
