@@ -2,12 +2,19 @@
   position: relative;
   z-index: 1000;
   padding: 1rem;
-  height: min-content;
+  height: calc(100vh - 6rem);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  overflow-y: auto;
   background-color: #eeeeee;
+
+  &.desktop {
+    position: sticky;
+    top: 4rem;
+    height: calc(100vh - 7rem);
+  }
 
   > div {
     display: flex;
@@ -52,9 +59,14 @@
   }
 }
 
-.antd-modal-control-panel .ant-modal-content {
+.antd-modal-control-panel {
+  top: 3rem;
   padding: 0;
-  background-color: #eeeeee;
+
+  .ant-modal-content {
+    padding: 0;
+    background-color: #eeeeee;
+  }
 }
 
 @media only screen and (max-width: 650px) {
