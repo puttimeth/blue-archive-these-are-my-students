@@ -37,6 +37,9 @@ function App() {
   const [studentShop, setStudentShop] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
   const [studentMisc, setStudentMisc] = useState({}); // 0 = don't use, 1 = include, 2 = exclude
   const [studentSquadType, setStudentSquadType] = useState(""); // empty = don't use, "striker" = show only striker students, "special" = show only special students
+  const [studentRole, setStudentRole] = useState(new Set()); // empty = don't use, item in array can be "Tanker", "DamageDealer", "Healer", "Supporter" or "Vehicle"
+  const [studentAttackType, setStudentAttackType] = useState(new Set()); // empty = don't use, item in array can be "Explosion", "Pierce", "Mystic" or "Sonic"
+  const [studentDefenseType, setStudentDefenseType] = useState(new Set()); // empty = don't use, item in array can be "LightArmor", "HeavyArmor", "Unarmed" or "ElasticArmor"
   // sort config
   const [studentSortedBy, setStudentSortedBy] = useState("name"); // value can be either "name" or "release date"
   const [studentLng, setStudentLng] = useState("en"); // support "en" and "th"
@@ -117,6 +120,15 @@ function App() {
     if (currentConfig.studentSquadType) {
       setStudentSquadType(currentConfig.studentSquadType);
     }
+    if (currentConfig.studentAttackType) {
+      setStudentAttackType(new Set(currentConfig.studentAttackType));
+    }
+    if (currentConfig.studentDefenseType) {
+      setStudentDefenseType(new Set(currentConfig.studentDefenseType));
+    }
+    if (currentConfig.studentRole) {
+      setStudentRole(new Set(currentConfig.studentRole));
+    }
     if (currentConfig.studentSortedBy) {
       setStudentSortedBy(currentConfig.studentSortedBy);
     }
@@ -139,6 +151,9 @@ function App() {
       studentShop: studentShop,
       studentMisc: studentMisc,
       studentSquadType: studentSquadType,
+      studentAttackType: studentAttackType,
+      studentDefenseType: studentDefenseType,
+      studentRole: studentRole,
       studentSortedBy: studentSortedBy,
       studentLng: studentLng,
       isSortedByAscending: isSortedByAscending,
@@ -207,6 +222,9 @@ function App() {
     studentShop,
     studentMisc,
     studentSquadType,
+    studentAttackType,
+    studentDefenseType,
+    studentRole,
     studentSortedBy,
     studentLng,
     isSortedByAscending,
@@ -320,6 +338,24 @@ function App() {
         studentSquadType !== studentData[studentId].squadType
       )
         return false;
+      // role
+      if (
+        studentRole.size > 0 &&
+        !studentRole.has(studentData[studentId].tacticRole)
+      )
+        return false;
+      // attack type
+      if (
+        studentAttackType.size > 0 &&
+        !studentAttackType.has(studentData[studentId].bulletType)
+      )
+        return false;
+      // defense type
+      if (
+        studentDefenseType.size > 0 &&
+        !studentDefenseType.has(studentData[studentId].armorType)
+      )
+        return false;
       // pass all filter, return true
       return true;
     });
@@ -337,6 +373,9 @@ function App() {
     studentShop,
     studentMisc,
     studentSquadType,
+    studentRole,
+    studentAttackType,
+    studentDefenseType,
     isSortedByAscending,
   ]);
 
@@ -384,6 +423,12 @@ function App() {
           setStudentMisc={setStudentMisc}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
+          studentRole={studentRole}
+          setStudentRole={setStudentRole}
+          studentAttackType={studentAttackType}
+          setStudentAttackType={setStudentAttackType}
+          studentDefenseType={studentDefenseType}
+          setStudentDefenseType={setStudentDefenseType}
           studentLng={studentLng}
           setStudentLng={setStudentLng}
           noStudent={noStudent}
@@ -437,6 +482,12 @@ function App() {
           setStudentMisc={setStudentMisc}
           studentSquadType={studentSquadType}
           setStudentSquadType={setStudentSquadType}
+          studentRole={studentRole}
+          setStudentRole={setStudentRole}
+          studentAttackType={studentAttackType}
+          setStudentAttackType={setStudentAttackType}
+          studentDefenseType={studentDefenseType}
+          setStudentDefenseType={setStudentDefenseType}
           studentLng={studentLng}
           setStudentLng={setStudentLng}
           noStudent={noStudent}

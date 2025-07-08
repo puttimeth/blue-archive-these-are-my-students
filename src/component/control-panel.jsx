@@ -1,6 +1,14 @@
 import "./control-panel.scss";
 import { Button } from "antd";
-import { shopDataJp, ticketData, miscDataJp } from "data";
+import {
+  shopDataJp,
+  ticketData,
+  miscDataJp,
+  StudentAttackType,
+  StudentRole,
+  StudentDefenseType,
+  AttackDefenseTypeColor,
+} from "data";
 import React from "react";
 import { ImSortNumbericDesc, ImSortNumericAsc } from "react-icons/im";
 import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
@@ -23,6 +31,83 @@ const StarButton = ({ studentStar, setStudentStar, starValue }) => {
     </Button>
   );
 };
+
+const RoleButton = ({ studentRole, setStudentRole, roleValue }) => (
+  <Button
+    type={studentRole?.has?.(roleValue) ? "primary" : "default"}
+    style={{ display: "flex", gap: "4px", padding: "4px 8px" }}
+    onClick={() => {
+      let s = new Set(studentRole);
+      if (studentRole?.has?.(roleValue)) {
+        s.delete(roleValue);
+      } else {
+        s.add(roleValue);
+      }
+      setStudentRole(s);
+    }}
+  >
+    <img
+      src={`/icon/Role_${roleValue}.png`}
+      alt=""
+      style={{
+        height: "100%",
+        width: "auto",
+        ...(studentRole?.has?.(roleValue)
+          ? {}
+          : { filter: "brightness(0) saturate(100%)" }),
+      }}
+    />
+    {StudentRole[roleValue]}
+  </Button>
+);
+
+const AttackDefenseTypeButton = ({
+  type,
+  studentType,
+  setStudentType,
+  typeValue,
+  typeValueIndex,
+}) => (
+  <Button
+    type={studentType?.has?.(typeValue) ? "primary" : "default"}
+    onClick={() => {
+      let s = new Set(studentType);
+      if (studentType?.has?.(typeValue)) {
+        s.delete(typeValue);
+      } else {
+        s.add(typeValue);
+      }
+      setStudentType(s);
+    }}
+    style={{
+      padding: "0 12px 0 0",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        height: "100%",
+        padding: "4px",
+        boxSizing: "border-box",
+        borderRadius: "6px 0 0 6px",
+        backgroundColor: AttackDefenseTypeColor[typeValueIndex],
+      }}
+    >
+      <img
+        src={`/icon/Type_${type}.png`}
+        alt=""
+        style={{
+          height: "16px",
+          width: "auto",
+        }}
+      />
+    </div>
+    {type === "Attack"
+      ? StudentAttackType[typeValue]
+      : StudentDefenseType[typeValue]}
+  </Button>
+);
 
 const AvailabilityButton = ({
   studentAvailability,
@@ -69,6 +154,12 @@ export const ControlPanel = ({
   setStudentMisc,
   studentSquadType,
   setStudentSquadType,
+  studentRole,
+  setStudentRole,
+  studentAttackType,
+  setStudentAttackType,
+  studentDefenseType,
+  setStudentDefenseType,
   studentLng,
   setStudentLng,
   noStudent,
@@ -353,6 +444,98 @@ export const ControlPanel = ({
           >
             Special
           </Button>
+        </div>
+      </div>
+      {/* Role */}
+      <div>
+        <span>Role</span>
+        <div>
+          {Object.keys(StudentRole)
+            .slice(0, 3)
+            .map((role) => (
+              <RoleButton
+                key={role}
+                studentRole={studentRole}
+                setStudentRole={setStudentRole}
+                roleValue={role}
+              />
+            ))}
+        </div>
+        <div>
+          {Object.keys(StudentRole)
+            .slice(3)
+            .map((role) => (
+              <RoleButton
+                key={role}
+                studentRole={studentRole}
+                setStudentRole={setStudentRole}
+                roleValue={role}
+              />
+            ))}
+        </div>
+      </div>
+      {/* Attack Type */}
+      <div>
+        <span>Attack Type</span>
+        <div>
+          {Object.keys(StudentAttackType)
+            .slice(0, 2)
+            .map((t, idx) => (
+              <AttackDefenseTypeButton
+                key={t}
+                type="Attack"
+                studentType={studentAttackType}
+                setStudentType={setStudentAttackType}
+                typeValue={t}
+                typeValueIndex={idx}
+              />
+            ))}
+        </div>
+        <div>
+          {Object.keys(StudentAttackType)
+            .slice(2)
+            .map((t, idx) => (
+              <AttackDefenseTypeButton
+                key={t}
+                type="Attack"
+                studentType={studentAttackType}
+                setStudentType={setStudentAttackType}
+                typeValue={t}
+                typeValueIndex={idx + 2}
+              />
+            ))}
+        </div>
+      </div>
+      {/* Defense Type */}
+      <div>
+        <span>Defense Type</span>
+        <div>
+          {Object.keys(StudentDefenseType)
+            .slice(0, 2)
+            .map((t, idx) => (
+              <AttackDefenseTypeButton
+                key={t}
+                type="Defense"
+                studentType={studentDefenseType}
+                setStudentType={setStudentDefenseType}
+                typeValue={t}
+                typeValueIndex={idx}
+              />
+            ))}
+        </div>
+        <div>
+          {Object.keys(StudentDefenseType)
+            .slice(2)
+            .map((t, idx) => (
+              <AttackDefenseTypeButton
+                key={t}
+                type="Defense"
+                studentType={studentDefenseType}
+                setStudentType={setStudentDefenseType}
+                typeValue={t}
+                typeValueIndex={idx + 2}
+              />
+            ))}
         </div>
       </div>
       {/* Language */}

@@ -33,6 +33,7 @@
   button {
     border: 0 !important;
     box-shadow: none !important;
+    padding: 4px 12px;
 
     &.default {
       color: #000000e0 !important;
@@ -52,6 +53,7 @@
 }
 
 .antd-modal-control-panel .ant-modal-content {
+  padding: 0;
   background-color: #eeeeee;
 }
 
