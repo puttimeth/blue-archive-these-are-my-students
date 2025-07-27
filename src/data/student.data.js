@@ -1278,7 +1278,7 @@ export const studentData = {
   },
   10105: {
     defaultOrder: 198,
-    nameEn: "Mari (Idol)",
+    nameEn: "Mari (Pop Idol)",
     school: "Trinity",
     defaultStar: 3,
     squadType: "Main",
@@ -1290,7 +1290,7 @@ export const studentData = {
   },
   10106: {
     defaultOrder: 199,
-    nameEn: "Sakurako (Idol)",
+    nameEn: "Sakurako (Pop Idol)",
     school: "Trinity",
     defaultStar: 3,
     squadType: "Main",
@@ -1350,7 +1350,7 @@ export const studentData = {
   },
   10111: {
     defaultOrder: 208,
-    nameEn: "Neru (Uniform)",
+    nameEn: "Neru (School)",
     school: "Millennium",
     defaultStar: 3,
     squadType: "Main",
@@ -1362,7 +1362,7 @@ export const studentData = {
   },
   10112: {
     defaultOrder: 206,
-    nameEn: "Asuna (Uniform)",
+    nameEn: "Asuna (School)",
     school: "Millennium",
     defaultStar: 3,
     squadType: "Main",
@@ -1890,7 +1890,7 @@ export const studentData = {
   },
   16016: {
     defaultOrder: 200,
-    nameEn: "Mine (Idol)",
+    nameEn: "Mine (Pop Idol)",
     school: "Trinity",
     defaultStar: 1,
     squadType: "Main",
@@ -2772,7 +2772,7 @@ export const studentData = {
   },
   26014: {
     defaultOrder: 207,
-    nameEn: "Karin (Uniform)",
+    nameEn: "Karin (School)",
     school: "Millennium",
     defaultStar: 1,
     squadType: "Support",
