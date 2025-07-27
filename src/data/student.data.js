@@ -1347,7 +1347,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Unique",
     nameTh: "เซอา",
-    isJpOnly: true,
   },
   10111: {
     defaultOrder: 208,
@@ -1360,7 +1359,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Fest",
     nameTh: "เนรุ (ชุดนักเรียน)",
-    isJpOnly: true,
   },
   10112: {
     defaultOrder: 206,
@@ -1373,7 +1371,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Unique",
     nameTh: "อาสึนะ (ชุดนักเรียน)",
-    isJpOnly: true,
   },
   10113: {
     defaultOrder: 211,
@@ -2419,7 +2416,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Fest",
     nameTh: "ริโอะ",
-    isJpOnly: true,
   },
   20042: {
     defaultOrder: 210,
@@ -2432,7 +2428,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "มากิ (แคมป์)",
-    isJpOnly: true,
   },
   20043: {
     defaultOrder: 213,
@@ -2786,7 +2781,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Event",
     nameTh: "คาริน (ชุดนักเรียน)",
-    isJpOnly: true,
   },
   26015: {
     defaultOrder: 229,
