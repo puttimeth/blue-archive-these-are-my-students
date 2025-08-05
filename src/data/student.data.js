@@ -1383,7 +1383,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Permanent",
     nameTh: "เซนะ (ชุดลำลอง)",
-    isJpOnly: true,
   },
   10114: {
     defaultOrder: 212,
@@ -1395,8 +1394,7 @@ export const studentData = {
     bulletType: "Mystic",
     armorType: "LightArmor",
     availability: "Permanent",
-    nameTh: "จูริ (ชุดงานเสริม)",
-    isJpOnly: true,
+    nameTh: "จูริ (พาร์ทไทม์)",
   },
   10115: {
     defaultOrder: 214,
