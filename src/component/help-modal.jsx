@@ -1,5 +1,5 @@
 import "./help-modal.scss";
-import { Modal } from "antd";
+import { Divider, Modal } from "antd";
 import React from "react";
 
 export const HelpModal = ({ modalStatus, setModalStatus, studentLng }) => (
@@ -45,6 +45,21 @@ export const HelpModal = ({ modalStatus, setModalStatus, studentLng }) => (
             <span style={{ fontWeight: "bold" }}>use share button</span> in the
             top right to obtain sharable link for others.
           </span>
+          <Divider style={{ margin: "0" }} />
+          <small>
+            I created this website as a hobby and do not earn any revenue from
+            it. The purpose of this site is to help new players easily share
+            their students and get assistance. All assets on this website are
+            the copyright of their respective authors. If you're interested in
+            the source code, I open public on my{" "}
+            <a
+              href="https://github.com/puttimeth/blue-archive-these-are-my-students"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Github repo
+            </a>
+          </small>
         </>
       )}
       {studentLng === "th" && (
@@ -74,6 +89,21 @@ export const HelpModal = ({ modalStatus, setModalStatus, studentLng }) => (
             หากต้องการแชร์ให้คนอื่น โปรด{" "}
             <span style={{ fontWeight: "bold" }}>แตะปุ่มแชร์</span> ที่มุมขวาบน
           </span>
+          <Divider style={{ margin: "0" }} />
+          <small>
+            จุดประสงค์ของเว็บไซต์นี้คือเพื่อช่วยเหลือผู้เล่นใหม่ในเกม Blue
+            Archive ให้สามารถแชร์นักเรียนที่มีได้ง่ายขึ้น
+            ผมไม่ได้สร้างรายได้จากเว็บไซต์นี้ และ assets
+            ทั้งหมดในเว็บไซต์นี้เป็นลิขสิทธิ์ของผู้สร้าง
+            หากคุณสนใจในโค้ดของเว็บไซต์นี้สามารถดูได้ที่{" "}
+            <a
+              href="https://github.com/puttimeth/blue-archive-these-are-my-students"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Github repo
+            </a>
+          </small>
         </>
       )}
     </div>

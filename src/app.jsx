@@ -1,6 +1,6 @@
 import "./app.scss";
 import { message, Modal } from "antd";
-import { DownloadModal, Footer, Header, HelpModal } from "component";
+import { DownloadModal, Header, HelpModal } from "component";
 import { ControlPanel } from "component/control-panel";
 import {
   studentDefaultOrderSortData,
@@ -559,7 +559,6 @@ function App() {
           }
         </div>
       </div>
-      <Footer />
     </>
   );
 }
