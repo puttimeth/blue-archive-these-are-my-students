@@ -28,6 +28,7 @@ function App() {
   const [noStudentFav, setNoStudentFav] = useState(0);
   const [noStudent, setNoStudent] = useState(0);
   // filter config
+  const [studentSearch, setStudentSearch] = useState("");
   const [studentServer, setStudentServer] = useState("jp"); // value can be either "jp" or "global"
   const [studentOwned, setStudentOwned] = useState(""); // empty = don't use, "owned" = show only owned students, "not owned" = show only not owned students
   const [studentFav, setStudentFav] = useState(""); // empty = don't use, "fav" = show only favorite students, "not fav" = show only not favorite students
@@ -295,6 +296,19 @@ function App() {
     // apply filter
     targetStudents = targetStudents.filter((studentId) => {
       // filter student
+      // search
+      if (studentSearch !== "") {
+        let studentSearchFormat = studentSearch.toLocaleLowerCase();
+        if (
+          !studentData[studentId].nameEn
+            .toLocaleLowerCase()
+            .includes(studentSearchFormat) &&
+          !studentData[studentId].nameTh
+            .toLocaleLowerCase()
+            .includes(studentSearchFormat)
+        )
+          return false;
+      }
       // server
       if (
         studentServer === "global" &&
@@ -364,6 +378,7 @@ function App() {
   }, [
     studentSortedBy,
     studentLng,
+    studentSearch,
     studentServer,
     studentOwned,
     studentFav,
@@ -403,6 +418,8 @@ function App() {
       >
         <ControlPanel
           isDesktop={false}
+          studentSearch={studentSearch}
+          setStudentSearch={setStudentSearch}
           studentServer={studentServer}
           setStudentServer={setStudentServer}
           studentSortedBy={studentSortedBy}
@@ -462,6 +479,8 @@ function App() {
         />
         {/* Desktop Control Panel */}
         <ControlPanel
+          studentSearch={studentSearch}
+          setStudentSearch={setStudentSearch}
           studentServer={studentServer}
           setStudentServer={setStudentServer}
           studentSortedBy={studentSortedBy}
