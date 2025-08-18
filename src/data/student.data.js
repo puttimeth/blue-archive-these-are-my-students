@@ -2451,7 +2451,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Permanent",
     nameTh: "อิซุมิ (ปีใหม่)",
-    isJpOnly: true,
   },
   20044: {
     defaultOrder: 215,
