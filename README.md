@@ -21,8 +21,7 @@ Website to share Blue Archive's students with other people. No need to capture s
 1. Add `webp` image of the student (prefers `200x226 pixel`) to `/public/students` directory with the file's name be their `id`.
 2. Add student's data to [`student.data.js/studentData`](https://github.com/puttimeth/blue-archive-these-are-my-students/blob/309ae86507b24453e7659c25ea7589e65b3e58ef/src/data/student.data.js) object. The data should be added sorted by their id. The data structure of the student is described below.
 3. Add student's id to [`student.data.js/studentDefaultOrderSortData`](https://github.com/puttimeth/blue-archive-these-are-my-students/blob/309ae86507b24453e7659c25ea7589e65b3e58ef/src/data/student.data.js) array sorted by their release date. The older one come first.
-4. Run `yarn sort-order` to get students' id sorted by their name in English and Thai. You can do it manually if you know what you're doing.
-5. Replace the array of [`student.data.js/studentEnSortData`](https://github.com/puttimeth/blue-archive-these-are-my-students/blob/309ae86507b24453e7659c25ea7589e65b3e58ef/src/data/student.data.js) and [`student.data.js/studentThSortData`](https://github.com/puttimeth/blue-archive-these-are-my-students/blob/309ae86507b24453e7659c25ea7589e65b3e58ef/src/data/student.data.js) with the array from step 4.
+4. Run `yarn sort-order` to automatically generate data file contains students' id sorted by their name in English and Thai.
 
 ## Student's data
 

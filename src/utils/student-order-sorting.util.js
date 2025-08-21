@@ -1,4 +1,6 @@
 import { studentData } from "../data/student.data.js";
+import fs from "fs";
+import path from "path";
 
 // mapping between student's name and student id; will be used in sorting algorithm below
 const enNames = {};
@@ -42,5 +44,21 @@ for (let name of Object.keys(thNames).sort((a, b) => {
   thIdOrder.push(thNames[name]);
 }
 
-console.log("EN\n", JSON.stringify(enIdOrder, undefined, " "));
-console.log("TH\n", JSON.stringify(thIdOrder, undefined, " "));
+// auto create JS file
+let content = `
+/**
+ * SortData is a collection of student id (keys of studentData object) that are sorted by various properties.
+ * These data can be sorted real-time but the data is the same every time so extract
+ * it as a new field reduce CPU workload. The downside is they must be updated everytime studentData
+ * is updated.
+ */
+export const studentEnSortData = [
+${enIdOrder.map((id) => `"${id}"`).join(",")}
+];
+
+export const studentThSortData = [
+${thIdOrder.map((id) => `"${id}"`).join(",")}
+];
+`;
+
+fs.writeFileSync(path.join("src", "data", "student-sort.data.js"), content);
