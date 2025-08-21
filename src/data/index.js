@@ -2,7 +2,7 @@ export * from "./misc.data";
 
 export * from "./shop.data";
 
-export * from "./keep-student-sort.data";
+export * from "./student-sort.data";
 
 export * from "./student.data";
 
