@@ -2543,6 +2543,19 @@ export const studentData = {
     nameTh: "นางิสะ (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
+  20049: {
+    defaultOrder: 234,
+    nameEn: "Misaki (Swimsuit)",
+    school: "Arius",
+    defaultStar: 3,
+    squadType: "Support",
+    tacticRole: "DamageDealer",
+    bulletType: "Explosion",
+    armorType: "Unarmed",
+    availability: "Permanent",
+    nameTh: "มิซากิ (ชุดว่ายน้ำ)",
+    isJpOnly: true,
+  },
   23000: {
     defaultOrder: 33,
     nameEn: "Airi",
@@ -3080,4 +3093,5 @@ export const studentDefaultOrderSortData = [
   "10122",
   "10125",
   "10126",
+  "20049",
 ];
