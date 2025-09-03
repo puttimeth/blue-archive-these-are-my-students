@@ -314,24 +314,29 @@ export const ControlPanel = ({
             <AvailabilityButton
               studentAvailability={studentAvailability}
               setStudentAvailability={setStudentAvailability}
-              availabilityValue="Permanent"
+              availabilityValue="Regular"
             />
             <AvailabilityButton
               studentAvailability={studentAvailability}
               setStudentAvailability={setStudentAvailability}
               availabilityValue="Unique"
             />
-          </div>
-          <div>
             <AvailabilityButton
               studentAvailability={studentAvailability}
               setStudentAvailability={setStudentAvailability}
               availabilityValue="Event"
             />
+          </div>
+          <div>
             <AvailabilityButton
               studentAvailability={studentAvailability}
               setStudentAvailability={setStudentAvailability}
               availabilityValue="Fest"
+            />
+            <AvailabilityButton
+              studentAvailability={studentAvailability}
+              setStudentAvailability={setStudentAvailability}
+              availabilityValue="Archived"
             />
           </div>
         </div>

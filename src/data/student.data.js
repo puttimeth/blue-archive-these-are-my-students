@@ -37,7 +37,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อารุ",
   },
   10001: {
@@ -49,7 +49,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "เอมิ",
   },
   10002: {
@@ -61,7 +61,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ฮารุนะ",
   },
   10003: {
@@ -73,7 +73,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ฮิฟุมิ",
   },
   10004: {
@@ -85,7 +85,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ฮินะ",
   },
   10005: {
@@ -97,7 +97,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "โฮชิโนะ",
   },
   10006: {
@@ -109,7 +109,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อิโอริ",
   },
   10007: {
@@ -121,7 +121,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "มากิ",
   },
   10008: {
@@ -133,7 +133,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "เนรุ",
   },
   10009: {
@@ -145,7 +145,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อิซุมิ",
   },
   10010: {
@@ -157,7 +157,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ชิโรโกะ",
   },
   10011: {
@@ -169,7 +169,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ชุน",
   },
   10012: {
@@ -181,7 +181,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "สึมิเระ",
   },
   10013: {
@@ -193,7 +193,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ซึรุกิ",
   },
   10014: {
@@ -205,7 +205,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อิซุนะ",
   },
   10015: {
@@ -217,7 +217,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อาริสึ",
   },
   10016: {
@@ -229,7 +229,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "มิโดริ",
   },
   10017: {
@@ -241,7 +241,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "เชริโน่",
   },
   10018: {
@@ -253,7 +253,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ยูสึ",
   },
   10019: {
@@ -265,7 +265,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อาซึสะ",
   },
   10020: {
@@ -277,7 +277,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "โคฮารุ",
   },
   10021: {
@@ -325,7 +325,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ชิโรโกะ (นักปั่น)",
   },
   10025: {
@@ -337,7 +337,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ชุน (วัยเด็ก)",
   },
   10026: {
@@ -373,7 +373,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อาสึนะ (บันนี่เกิร์ล)",
   },
   10029: {
@@ -385,7 +385,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "นัตสึ",
   },
   10030: {
@@ -397,7 +397,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ชินัตสึ (ออนเซ็น)",
   },
   10031: {
@@ -445,7 +445,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิโมริ",
   },
   10035: {
@@ -457,7 +457,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อุย",
   },
   10036: {
@@ -469,7 +469,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮินาตะ",
   },
   10037: {
@@ -481,7 +481,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มารินะ",
   },
   10038: {
@@ -493,7 +493,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิยาโกะ",
   },
   10039: {
@@ -505,7 +505,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิยุ",
   },
   10040: {
@@ -517,7 +517,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "สึคุโยะ",
   },
   10041: {
@@ -529,7 +529,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิซากิ",
   },
   10042: {
@@ -541,7 +541,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อาสึโกะ",
   },
   10043: {
@@ -553,7 +553,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "วาคาโมะ (ชุดว่ายน้ำ)",
   },
   10044: {
@@ -565,7 +565,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โนโนมิ (ชุดว่ายน้ำ)",
   },
   10045: {
@@ -613,7 +613,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ซาโอริ",
   },
   10049: {
@@ -625,7 +625,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาซึสะ",
   },
   10050: {
@@ -637,7 +637,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โคโคน่า",
   },
   10051: {
@@ -649,7 +649,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อุทาฮะ (ชุดเชียร์)",
   },
   10052: {
@@ -661,7 +661,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โนอา",
   },
   10053: {
@@ -697,7 +697,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ชิกุเระ",
   },
   10056: {
@@ -709,7 +709,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เซรินะ (คริสต์มาส)",
   },
   10057: {
@@ -733,7 +733,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิเนะ",
   },
   10059: {
@@ -757,7 +757,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เมกุ",
   },
   10061: {
@@ -769,7 +769,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ซากุระโกะ",
   },
   10062: {
@@ -793,7 +793,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โคยูกิ",
   },
   10064: {
@@ -805,7 +805,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาโยโกะ (ปีใหม่)",
   },
   10065: {
@@ -817,7 +817,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาโฮะ",
   },
   10066: {
@@ -829,7 +829,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อาริสึ (ชุดเมด)",
   },
   10067: {
@@ -841,7 +841,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โทคิ (บันนี่เกิร์ล)",
   },
   10068: {
@@ -853,7 +853,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เรอิสะ",
   },
   10069: {
@@ -865,7 +865,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "รูมิ",
   },
   10070: {
@@ -877,7 +877,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มินะ",
   },
   10071: {
@@ -889,7 +889,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิยาโกะ (ชุดว่ายน้ำ)",
   },
   10072: {
@@ -901,7 +901,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ซากิ (ชุดว่ายน้ำ)",
   },
   10073: {
@@ -937,7 +937,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เมรุ",
   },
   10076: {
@@ -949,7 +949,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โคโทริ (ชุดเชียร์)",
   },
   10077: {
@@ -961,7 +961,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อิจิกะ",
   },
   10078: {
@@ -973,7 +973,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาสุมิ",
   },
   10079: {
@@ -1009,7 +1009,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ยูคาริ",
   },
   10082: {
@@ -1021,7 +1021,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เรนเกะ",
   },
   10083: {
@@ -1033,7 +1033,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คิเคียว",
   },
   10084: {
@@ -1045,7 +1045,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โคทามะ (แคมป์)",
   },
   10085: {
@@ -1057,7 +1057,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮาเระ (แคมป์)",
   },
   10086: {
@@ -1093,7 +1093,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาโยโกะ (เดรส)",
   },
   10089: {
@@ -1105,7 +1105,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อารุ (เดรส)",
   },
   10090: {
@@ -1117,7 +1117,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อุมิกะ",
   },
   10091: {
@@ -1153,7 +1153,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คิราระ",
   },
   10094: {
@@ -1165,7 +1165,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โมโมอิ (ชุดเมด)",
   },
   10095: {
@@ -1177,7 +1177,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิโดริ (ชุดเมด)",
   },
   10096: {
@@ -1189,7 +1189,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คันนะ (ชุดว่ายน้ำ)",
   },
   10097: {
@@ -1201,7 +1201,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โมเอะ (ชุดว่ายน้ำ)",
   },
   10098: {
@@ -1261,7 +1261,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มารินะ (กี่เพ้า)",
   },
   10104: {
@@ -1273,7 +1273,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เรย์โจ",
   },
   10105: {
@@ -1309,7 +1309,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "จิอากิ",
   },
   10108: {
@@ -1321,7 +1321,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ยูกะ (ชุดนอน)",
   },
   10109: {
@@ -1333,7 +1333,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โนอา (ชุดนอน)",
   },
   10110: {
@@ -1381,7 +1381,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เซนะ (ชุดลำลอง)",
   },
   10114: {
@@ -1393,7 +1393,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "จูริ (พาร์ทไทม์)",
   },
   10115: {
@@ -1405,7 +1405,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เรย์",
     isJpOnly: true,
   },
@@ -1418,7 +1418,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ซาโอริ (เดรส)",
     isJpOnly: true,
   },
@@ -1457,7 +1457,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "ElasticArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "นางุสะ",
     isJpOnly: true,
   },
@@ -1470,7 +1470,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "นัตสึ (วงดนตรี)",
     isJpOnly: true,
   },
@@ -1483,7 +1483,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ยูคาริ (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
@@ -1535,7 +1535,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เอริ",
     isJpOnly: true,
   },
@@ -1548,7 +1548,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาโนเอะ",
     isJpOnly: true,
   },
@@ -1561,7 +1561,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อาคาเนะ",
   },
   13001: {
@@ -1573,7 +1573,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ชิเซะ",
   },
   13002: {
@@ -1585,7 +1585,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อาคาริ",
   },
   13003: {
@@ -1597,7 +1597,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮาสุมิ",
   },
   13004: {
@@ -1621,7 +1621,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาโยโกะ",
   },
   13006: {
@@ -1633,7 +1633,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มุสึกิ",
   },
   13007: {
@@ -1645,7 +1645,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "จุนโกะ",
   },
   13008: {
@@ -1657,7 +1657,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เซริกะ",
   },
   13009: {
@@ -1669,7 +1669,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "สึบากิ",
   },
   13010: {
@@ -1681,7 +1681,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ยูกะ",
   },
   13011: {
@@ -1693,7 +1693,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โมโมอิ",
   },
   13012: {
@@ -1705,7 +1705,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คิริโนะ",
   },
   13013: {
@@ -1717,7 +1717,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โมมิจิ",
   },
   13014: {
@@ -1729,7 +1729,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เรนเกะ (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
@@ -1742,7 +1742,7 @@ export const studentData = {
     tacticRole: "Tanker",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮารุกะ",
   },
   16001: {
@@ -1754,7 +1754,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อาสึนะ",
   },
   16002: {
@@ -1766,7 +1766,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โคโทริ",
   },
   16003: {
@@ -1778,7 +1778,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "สึซึมิ",
   },
   16004: {
@@ -1790,7 +1790,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "พีน่า",
   },
   16005: {
@@ -1959,7 +1959,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ฮิบิกิ",
   },
   20001: {
@@ -1971,7 +1971,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "คาริน",
   },
   20002: {
@@ -1983,7 +1983,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ซายะ",
   },
   20003: {
@@ -1995,7 +1995,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "มาชิโระ",
   },
   20004: {
@@ -2019,7 +2019,7 @@ export const studentData = {
     tacticRole: "Vehicle",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ฮิฟุมิ (ชุดว่ายน้ำ)",
   },
   20006: {
@@ -2031,7 +2031,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "ซายะ (ชุดลำลอง)",
   },
   20007: {
@@ -2055,7 +2055,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "อาโกะ",
   },
   20009: {
@@ -2067,7 +2067,7 @@ export const studentData = {
     tacticRole: "Vehicle",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "เชริโน่ (ออนเซ็น)",
   },
   20010: {
@@ -2079,7 +2079,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "โนโดกะ (ออนเซ็น)",
   },
   20011: {
@@ -2091,7 +2091,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "เซริกะ (ปีใหม่)",
   },
   20012: {
@@ -2103,7 +2103,7 @@ export const studentData = {
     tacticRole: "Vehicle",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "เซนะ",
   },
   20013: {
@@ -2115,7 +2115,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Archived",
     nameTh: "จิฮิโระ",
   },
   20014: {
@@ -2127,7 +2127,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ซากิ",
   },
   20015: {
@@ -2139,7 +2139,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คาเอเดะ",
   },
   20016: {
@@ -2151,7 +2151,7 @@ export const studentData = {
     tacticRole: "Vehicle",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อิโรฮะ",
   },
   20017: {
@@ -2163,7 +2163,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮิโยริ",
   },
   20018: {
@@ -2175,7 +2175,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โมเอะ",
   },
   20019: {
@@ -2187,7 +2187,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อาคาเนะ (บันนี่เกิร์ล)",
   },
   20020: {
@@ -2199,7 +2199,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮิมาริ",
   },
   20021: {
@@ -2211,7 +2211,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮานาเอะ (คริสต์มาส)",
   },
   20022: {
@@ -2235,7 +2235,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คันนะ",
   },
   20024: {
@@ -2259,7 +2259,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮารุกะ (ปีใหม่)",
   },
   20026: {
@@ -2271,7 +2271,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิโนริ",
   },
   20027: {
@@ -2283,7 +2283,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ชิโรโกะ (ชุดว่ายน้ำ)",
   },
   20028: {
@@ -2307,7 +2307,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิโมริ (ชุดว่ายน้ำ)",
   },
   20030: {
@@ -2319,7 +2319,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮารุนะ (ชุดพละ)",
   },
   20031: {
@@ -2331,7 +2331,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ชิกุเระ (ออนเซ็น)",
   },
   20032: {
@@ -2343,7 +2343,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เอมิ (ชุดว่ายน้ำ)",
   },
   20033: {
@@ -2367,7 +2367,7 @@ export const studentData = {
     tacticRole: "Vehicle",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อาคาริ (ปีใหม่)",
   },
   20035: {
@@ -2379,7 +2379,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "สึบากิ (ไกด์)",
   },
   20036: {
@@ -2391,7 +2391,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Mystic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เซริกะ (ชุดว่ายน้ำ)",
   },
   20037: {
@@ -2403,7 +2403,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฟุบุกิ (ชุดว่ายน้ำ)",
   },
   20038: {
@@ -2415,7 +2415,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โทโมเอะ (กี่เพ้า)",
   },
   20039: {
@@ -2427,7 +2427,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Sonic",
     armorType: "ElasticArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คิซากิ",
   },
   20040: {
@@ -2439,7 +2439,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ซัตสึกิ",
   },
   20041: {
@@ -2463,7 +2463,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มากิ (แคมป์)",
   },
   20043: {
@@ -2475,7 +2475,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อิซุมิ (ปีใหม่)",
   },
   20044: {
@@ -2487,7 +2487,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "สึมิเระ (ชุดทำงาน)",
     isJpOnly: true,
   },
@@ -2500,7 +2500,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "พีน่า (ไกด์)",
     isJpOnly: true,
   },
@@ -2513,7 +2513,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "นิยะ",
     isJpOnly: true,
   },
@@ -2526,7 +2526,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Sonic",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "คิเคียว (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
@@ -2552,7 +2552,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Explosion",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มิซากิ (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
@@ -2565,7 +2565,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ไอริ",
   },
   23001: {
@@ -2577,7 +2577,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฟูกะ",
   },
   23002: {
@@ -2589,7 +2589,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Explosion",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮานาเอะ",
   },
   23003: {
@@ -2601,7 +2601,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮาเระ",
   },
   23004: {
@@ -2613,7 +2613,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อุทาฮะ",
   },
   23005: {
@@ -2625,7 +2625,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "อายาเนะ",
   },
   23006: {
@@ -2637,7 +2637,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ชิซุโกะ",
   },
   23007: {
@@ -2649,7 +2649,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Pierce",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ฮานาโกะ",
   },
   23008: {
@@ -2661,7 +2661,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Mystic",
     armorType: "Unarmed",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "มารี",
   },
   26000: {
@@ -2673,7 +2673,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Pierce",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ชินัตสึ",
   },
   26001: {
@@ -2685,7 +2685,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โคทามะ",
   },
   26002: {
@@ -2697,7 +2697,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "จูริ",
   },
   26003: {
@@ -2709,7 +2709,7 @@ export const studentData = {
     tacticRole: "Healer",
     bulletType: "Mystic",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "เซรินะ",
   },
   26004: {
@@ -2721,7 +2721,7 @@ export const studentData = {
     tacticRole: "Supporter",
     bulletType: "Explosion",
     armorType: "LightArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "ชิมิโกะ",
   },
   26005: {
@@ -2733,7 +2733,7 @@ export const studentData = {
     tacticRole: "DamageDealer",
     bulletType: "Pierce",
     armorType: "HeavyArmor",
-    availability: "Permanent",
+    availability: "Regular",
     nameTh: "โยชิมิ",
   },
   26006: {
