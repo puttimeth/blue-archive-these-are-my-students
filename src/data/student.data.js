@@ -1420,7 +1420,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "ซาโอริ (เดรส)",
-    isJpOnly: true,
   },
   10117: {
     defaultOrder: 217,
