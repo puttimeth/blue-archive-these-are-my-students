@@ -2578,6 +2578,19 @@ export const studentData = {
     nameTh: "มิซากิ (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
+  20050: {
+    defaultOrder: 237,
+    nameEn: "Ritsu",
+    school: "WildHunt",
+    defaultStar: 3,
+    squadType: "Support",
+    tacticRole: "Supporter",
+    bulletType: "Mystic",
+    armorType: "Unarmed",
+    availability: "Regular",
+    nameTh: "ริตสึ",
+    isJpOnly: true,
+  },
   23000: {
     defaultOrder: 33,
     nameEn: "Airi",
@@ -3118,4 +3131,5 @@ export const studentDefaultOrderSortData = [
   "20049",
   "10127",
   "10128",
+  "20050",
 ];
