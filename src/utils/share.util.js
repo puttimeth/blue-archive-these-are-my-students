@@ -1,9 +1,10 @@
 import { deckStateToBase64 } from "./data-encrypt-decrypt.util";
 import { message } from "antd";
 import { studentData } from "data";
-import { MdOutlineStar } from "react-icons/md";
+import ReactGA from "react-ga4";
 
 export const copyShareLinkToClipboard = (deckState) => {
+  ReactGA.event("share", { method: "link-clipboard" });
   const base64String = deckStateToBase64(deckState);
   navigator.clipboard.writeText(window.location.origin + "/" + base64String);
   message.info("Shareable link is copied to clipboard.");
@@ -169,6 +170,7 @@ const getStudentCanvas = async ({ studentIds, deckState, language, title }) => {
 };
 
 export const copyStudentImageToClipboard = async (canvasData) => {
+  ReactGA.event("share", { method: "image-clipboard" });
   if (canvasData.studentIds.length === 0) {
     message.warning("No student appear.");
     return;
@@ -186,6 +188,7 @@ export const copyStudentImageToClipboard = async (canvasData) => {
 };
 
 export const downloadStudentImage = async (canvasData) => {
+  ReactGA.event("share", { method: "download-image" });
   if (canvasData.studentIds.length === 0) {
     message.warning("No student appear.");
     return;
