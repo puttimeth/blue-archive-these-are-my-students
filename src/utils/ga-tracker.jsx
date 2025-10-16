@@ -11,6 +11,8 @@ export const GaTracker = () => {
       ReactGA.initialize(id);
       console.log("GA initialized successfully.");
       setInit(true);
+    } else {
+      console.log("GA measurement ID is not found");
     }
   }, []);
 
