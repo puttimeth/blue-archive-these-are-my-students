@@ -7,12 +7,8 @@ export const GaTracker = () => {
   useEffect(() => {
     const id = import.meta.env.VITE_GA_MEASUREMENT_ID;
     if (id) {
-      console.log("GA measurement ID is found");
       ReactGA.initialize(id);
-      console.log("GA initialized successfully.");
       setInit(true);
-    } else {
-      console.log("GA measurement ID is not found");
     }
   }, []);
 
