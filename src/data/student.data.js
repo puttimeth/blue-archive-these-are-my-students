@@ -1468,7 +1468,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Regular",
     nameTh: "นัตสึ (วงดนตรี)",
-    isJpOnly: true,
   },
   10121: {
     defaultOrder: 224,
