@@ -1586,6 +1586,19 @@ export const studentData = {
     nameTh: "สึซึมิ (เมจิคัล)",
     isJpOnly: true,
   },
+  10130: {
+    defaultOrder: 241,
+    nameEn: "Subaru",
+    school: "Arius",
+    defaultStar: 3,
+    squadType: "Main",
+    tacticRole: "DamageDealer",
+    bulletType: "Mystic",
+    armorType: "Unarmed",
+    availability: "Regular",
+    nameTh: "สุบารุ",
+    isJpOnly: true,
+  },
   13000: {
     defaultOrder: 14,
     nameEn: "Akane",
@@ -3170,4 +3183,5 @@ export const studentDefaultOrderSortData = [
   "20051",
   "10129",
   "16018",
+  "10130",
 ];
