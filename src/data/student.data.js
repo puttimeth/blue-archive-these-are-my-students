@@ -1480,7 +1480,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "ยูคาริ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10122: {
     defaultOrder: 231,
@@ -1778,7 +1777,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Regular",
     nameTh: "เรนเกะ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   16000: {
     defaultOrder: 25,
@@ -2585,7 +2583,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Regular",
     nameTh: "คิเคียว (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   20048: {
     defaultOrder: 230,
