@@ -23,6 +23,12 @@
 
       > span {
         font-size: 15px;
+
+        &:first-child {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
       }
 
       > div {

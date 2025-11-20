@@ -11,7 +11,11 @@ import {
 } from "data";
 import React from "react";
 import { ImSortNumbericDesc, ImSortNumericAsc } from "react-icons/im";
-import { PiMinusSquare, PiPlusSquare } from "react-icons/pi";
+import {
+  PiBracketsCurlyBold,
+  PiMinusSquare,
+  PiPlusSquare,
+} from "react-icons/pi";
 
 const StarButton = ({ studentStar, setStudentStar, starValue }) => {
   return (
@@ -342,7 +346,9 @@ export const ControlPanel = ({
         </div>
         {/* Ticket */}
         <div>
-          <span>Ticket</span>
+          <span>
+            Ticket <PiBracketsCurlyBold size={15} />
+          </span>
           {Object.keys(ticketData).map((ticket) => (
             <div key={ticket}>
               <Button
@@ -376,7 +382,9 @@ export const ControlPanel = ({
         </div>
         {/* Shop */}
         <div>
-          <span>Shop</span>
+          <span>
+            Shop <PiBracketsCurlyBold size={15} />
+          </span>
           {Object.keys(shopDataJp).map((shop) => (
             <div key={shop}>
               <Button
@@ -408,7 +416,9 @@ export const ControlPanel = ({
         </div>
         {/* Misc */}
         <div>
-          <span>Misc.</span>
+          <span>
+            Misc. <PiBracketsCurlyBold size={15} />
+          </span>
           {Object.keys(miscDataJp).map((misc) => (
             <div key={misc}>
               <Button
