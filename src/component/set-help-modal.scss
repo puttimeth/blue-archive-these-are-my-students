@@ -1,0 +1,9 @@
+.set-help-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  > span > svg {
+    vertical-align: -2px !important;
+  }
+}

@@ -243,11 +243,10 @@ function App() {
     if (isSortedByAscending === false) {
       targetStudents = targetStudents.toReversed();
     }
+    let unionPool = new Set();
+    let differencePool = new Set();
     // generate ticket student pool
-    let ticketIdPool = undefined;
     if (Object.values(studentTicket).some((e) => e !== 0)) {
-      let unionPool = new Set();
-      let differencePool = new Set();
       for (let [ticket, value] of Object.entries(studentTicket)) {
         if (value === 1) {
           unionPool = unionPool.union(ticketData[ticket]);
@@ -257,14 +256,10 @@ function App() {
       }
       if (unionPool.size === 0)
         unionPool = new Set(studentDefaultOrderSortData);
-      ticketIdPool = unionPool.difference(differencePool);
     }
     // generate shop student pool
-    let shopIdPool = undefined;
     let shopData = studentServer === "jp" ? shopDataJp : shopDataGlobal;
     if (Object.values(studentShop).some((e) => e !== 0)) {
-      let unionPool = new Set();
-      let differencePool = new Set();
       for (let [shop, value] of Object.entries(studentShop)) {
         if (value === 1) {
           unionPool = unionPool.union(shopData[shop]);
@@ -274,14 +269,10 @@ function App() {
       }
       if (unionPool.size === 0)
         unionPool = new Set(studentDefaultOrderSortData);
-      shopIdPool = unionPool.difference(differencePool);
     }
     // generate misc student pool
-    let miscIdPool = undefined;
     let miscData = studentServer === "jp" ? miscDataJp : miscDataGlobal;
     if (Object.values(studentMisc).some((e) => e !== 0)) {
-      let unionPool = new Set();
-      let differencePool = new Set();
       for (let [misc, value] of Object.entries(studentMisc)) {
         if (value === 1) {
           unionPool = unionPool.union(miscData[misc]);
@@ -291,7 +282,6 @@ function App() {
       }
       if (unionPool.size === 0)
         unionPool = new Set(studentDefaultOrderSortData);
-      miscIdPool = unionPool.difference(differencePool);
     }
     // apply filter
     targetStudents = targetStudents.filter((studentId) => {
@@ -339,13 +329,14 @@ function App() {
         !studentAvailability.has(studentData[studentId].availability)
       )
         return false;
-      // ticket
-      if (ticketIdPool !== undefined && !ticketIdPool.has(studentId))
-        return false;
-      // shop
-      if (shopIdPool !== undefined && !shopIdPool.has(studentId)) return false;
-      // misc
-      if (miscIdPool !== undefined && !miscIdPool.has(studentId)) return false;
+      // union operation; ticket, shop, misc
+      if (unionPool.size > 0 && differencePool.size > 0) {
+        if (!unionPool.difference(differencePool).has(studentId)) return false;
+      } else if (differencePool.size > 0) {
+        if (differencePool.has(studentId)) return false;
+      } else if (unionPool.size > 0) {
+        if (!unionPool.has(studentId)) return false;
+      }
       // squad type
       if (
         studentSquadType !== "" &&
