@@ -1492,7 +1492,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Fest",
     nameTh: "มิกะ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10123: {
     defaultOrder: 227,
@@ -1505,7 +1504,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Unique",
     nameTh: "เซอา (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10124: {
     defaultOrder: 228,
@@ -1518,7 +1516,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Unique",
     nameTh: "ฮาสุมิ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10125: {
     defaultOrder: 232,
@@ -2608,7 +2605,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Fest",
     nameTh: "นางิสะ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   20049: {
     defaultOrder: 234,
@@ -2961,7 +2957,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Event",
     nameTh: "อิจิกะ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
 };
 
