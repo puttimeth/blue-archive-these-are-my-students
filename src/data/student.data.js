@@ -2654,7 +2654,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Regular",
     nameTh: "มิซากิ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   20050: {
     defaultOrder: 237,
