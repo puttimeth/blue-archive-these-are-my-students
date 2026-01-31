@@ -55,7 +55,7 @@ The detail of each value are listed in the table below
 | squadType | The student's type. <br>"Main" = "Striker", <br>"Support" = "Special" |
 | tacticRole | The student's role. <br>"Tanker" = "Tank", <br>"DamageDealer" = "Dealer", <br>"Healer" = "Healer", <br>"Supporter" = "Support", <br>"Vehicle" = "T.S." |
 | bulletType | The student's attack type. <br>"Explosion" = "Explosive", <br>"Pierce" = "Piercing", <br>"Mystic" = "Mystic", <br>"Sonic" = "Sonic" |
-| armorType | The student's defense type. <br>"LightArmor" = "Light", <br>"HeavyArmor" = "Heavy", <br>"Unarmed" = "Special", <br>"ElasticArmor" = "Elastic" |
+| armorType | The student's defense type. <br>"LightArmor" = "Light", <br>"HeavyArmor" = "Heavy", <br>"Unarmed" = "Special", <br>"ElasticArmor" = "Elastic", <br>"CompositeArmor" = "Composite" |
 | availability | The recruit type of the student. <br>"Regular" = Always available in the regular pool (use blue ticket), <br>"Archived" = Always available in the archived pool (use green ticket), <br>"Unique" = Only available in its pool, <br>"Event" = Can only obtain by the event, <br>"Fest" = Only available in the festival pool |
 | nameTh | The student's name in Thai |
 | isJpOnly | (Optional) A boolean flag indicates whether this student appears only on the JP server |

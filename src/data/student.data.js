@@ -18,6 +18,7 @@ export const StudentDefenseType = {
   HeavyArmor: "Heavy",
   Unarmed: "Special",
   ElasticArmor: "Elastic",
+  CompositeArmor: "Composite",
 };
 
 export const AttackDefenseTypeColor = [
@@ -25,6 +26,7 @@ export const AttackDefenseTypeColor = [
   "#be8901",
   "#226f9b",
   "#9a46a8",
+  "#11776f",
 ];
 
 export const studentData = {
