@@ -1554,7 +1554,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Regular",
     nameTh: "มิโยะ",
-    isJpOnly: true,
   },
   10128: {
     defaultOrder: 236,
@@ -1567,7 +1566,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Regular",
     nameTh: "ฟุยุ",
-    isJpOnly: true,
   },
   10129: {
     defaultOrder: 239,
