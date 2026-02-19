@@ -2705,7 +2705,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Regular",
     nameTh: "ริตสึ",
-    isJpOnly: true,
   },
   20051: {
     defaultOrder: 238,
