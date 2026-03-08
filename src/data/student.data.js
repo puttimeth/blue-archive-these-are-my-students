@@ -1578,7 +1578,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Unique",
     nameTh: "สึซึมิ (เมจิคัล)",
-    isJpOnly: true,
   },
   10130: {
     defaultOrder: 241,
@@ -2078,7 +2077,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Event",
     nameTh: "ราบุ",
-    isJpOnly: true,
   },
   16019: {
     defaultOrder: 247,
@@ -2717,7 +2715,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Unique",
     nameTh: "เรอิสะ (เมจิคัล)",
-    isJpOnly: true,
   },
   20052: {
     defaultOrder: 243,
