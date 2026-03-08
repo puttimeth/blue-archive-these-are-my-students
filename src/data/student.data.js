@@ -2771,6 +2771,19 @@ export const studentData = {
     nameTh: "ยูสึ (คอมแบต)",
     isJpOnly: true,
   },
+  20056: {
+    defaultOrder: 253,
+    nameEn: "Koyuki (Pajamas)",
+    school: "Millennium",
+    defaultStar: 3,
+    squadType: "Support",
+    tacticRole: "Supporter",
+    bulletType: "Mystic",
+    armorType: "LightArmor",
+    availability: "Regular",
+    nameTh: "โคยูกิ (ชุดนอน)",
+    isJpOnly: true,
+  },
   23000: {
     defaultOrder: 33,
     nameEn: "Airi",
@@ -3326,4 +3339,5 @@ export const studentDefaultOrderSortData = [
   "10135",
   "10136",
   "20055",
+  "20056",
 ];
