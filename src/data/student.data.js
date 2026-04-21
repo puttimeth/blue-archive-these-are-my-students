@@ -1590,7 +1590,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Regular",
     nameTh: "สุบารุ",
-    isJpOnly: true,
   },
   10131: {
     defaultOrder: 242,
@@ -1603,7 +1602,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "ทาคาเนะ",
-    isJpOnly: true,
   },
   10132: {
     defaultOrder: 244,
@@ -2753,7 +2751,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "ยาคุโมะ",
-    isJpOnly: true,
   },
   20053: {
     defaultOrder: 245,
