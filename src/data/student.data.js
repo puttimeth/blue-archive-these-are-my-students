@@ -1614,7 +1614,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "สึคุโยะ (เดรส)",
-    isJpOnly: true,
   },
   10133: {
     defaultOrder: 246,
@@ -2802,7 +2801,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "มิจิรุ (เดรส)",
-    isJpOnly: true,
   },
   20054: {
     defaultOrder: 248,
