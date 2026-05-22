@@ -1626,7 +1626,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Unique",
     nameTh: "ริโอะ (คอมแบต)",
-    isJpOnly: true,
   },
   10134: {
     defaultOrder: 249,
@@ -1639,7 +1638,6 @@ export const studentData = {
     armorType: "CompositeArmor",
     availability: "Fest",
     nameTh: "อาริสึ (คอมแบต)",
-    isJpOnly: true,
   },
   10135: {
     defaultOrder: 250,
@@ -1652,7 +1650,6 @@ export const studentData = {
     armorType: "CompositeArmor",
     availability: "Fest",
     nameTh: "เคย์",
-    isJpOnly: true,
   },
   10136: {
     defaultOrder: 251,
@@ -2138,7 +2135,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Event",
     nameTh: "โทคิ (คอมแบต)",
-    isJpOnly: true,
   },
   16020: {
     defaultOrder: 259,
@@ -2813,7 +2809,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Unique",
     nameTh: "ฮิมาริ (คอมแบต)",
-    isJpOnly: true,
   },
   20055: {
     defaultOrder: 252,
