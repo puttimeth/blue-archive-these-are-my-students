@@ -1662,7 +1662,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "เอมิ (คอมแบต)",
-    isJpOnly: true,
   },
   10137: {
     defaultOrder: 254,
@@ -2873,7 +2872,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Regular",
     nameTh: "ยูสึ (คอมแบต)",
-    isJpOnly: true,
   },
   20056: {
     defaultOrder: 253,
