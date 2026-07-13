@@ -4,4 +4,4 @@ export * from "./download-modal";
 
 export * from "./header";
 
-export * from "./help-modal";
+export * from "./modal";

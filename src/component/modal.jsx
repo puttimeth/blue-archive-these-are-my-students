@@ -1,6 +1,8 @@
-import "./help-modal.scss";
+import "./modal.scss";
+import "./set-help-modal.scss";
 import { Divider, Modal } from "antd";
 import React from "react";
+import { PiBracketsCurlyBold } from "react-icons/pi";
 
 export const HelpModal = ({ modalStatus, setModalStatus, studentLng }) => (
   <Modal
@@ -11,7 +13,7 @@ export const HelpModal = ({ modalStatus, setModalStatus, studentLng }) => (
       setModalStatus(false);
     }}
   >
-    <div className="help-panel">
+    <div className="panel">
       {studentLng === "en" && (
         <>
           <span>
@@ -106,6 +108,65 @@ export const HelpModal = ({ modalStatus, setModalStatus, studentLng }) => (
           </small>
         </>
       )}
+    </div>
+  </Modal>
+);
+
+export const SetHelpModal = ({ modalStatus, setModalStatus, studentLng }) => (
+  <Modal
+    title={null}
+    open={modalStatus}
+    footer={null}
+    onCancel={() => {
+      setModalStatus(false);
+    }}
+  >
+    <div className="set-help-panel">
+      {studentLng === "en" && (
+        <>
+          <span>
+            Filter menus with a <PiBracketsCurlyBold size={15} /> symbol at the
+            end can be tapped again to turn red, which will exclude students in
+            that category from the search.
+          </span>
+        </>
+      )}
+      {studentLng === "th" && (
+        <>
+          <span>
+            เมนูกรองนักเรียนที่มีภาพ <PiBracketsCurlyBold size={15} />{" "}
+            ต่อท้ายสามารถกดซ้ำให้เป็นสีแดงเพื่อนำนักเรียนในหมวดนั้นออกจากการค้นหาได้
+          </span>
+        </>
+      )}
+    </div>
+  </Modal>
+);
+
+export const MoreProjectModal = ({ modalStatus, setModalStatus }) => (
+  <Modal
+    title={null}
+    open={modalStatus}
+    footer={null}
+    onCancel={() => {
+      setModalStatus(false);
+    }}
+  >
+    <div className="panel">
+      <span>
+        <b>More Blue Archive Projects</b>
+      </span>
+      <span>
+        I also created another website where you can play <b>wordle</b> using
+        Blue Archive student's name. Check it out at{" "}
+        <a
+          href="https://blue-dle.netlify.app"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          https://blue-dle.netlify.app
+        </a>
+      </span>
     </div>
   </Modal>
 );

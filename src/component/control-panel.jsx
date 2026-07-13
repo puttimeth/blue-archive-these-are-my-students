@@ -1,6 +1,6 @@
 import "./control-panel.scss";
-import { SetHelpModal } from "./set-help-modal";
-import { Button, Input, Modal } from "antd";
+import { Button, Input } from "antd";
+import { SetHelpModal } from "component";
 import {
   shopDataJp,
   ticketData,

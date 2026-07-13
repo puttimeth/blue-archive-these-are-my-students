@@ -1,12 +1,17 @@
 import "./header.scss";
 import { Button } from "antd";
 import React from "react";
-import { MdHelpOutline, MdOutlineSettings } from "react-icons/md";
+import {
+  MdHelpOutline,
+  MdOutlineManageSearch,
+  MdOutlineSettings,
+} from "react-icons/md";
 
 export const Header = ({
   setConfigModalStatus,
   setHelpModalStatus,
   setDownloadModalStatus,
+  setMoreProjectModalStatus,
 }) => {
   return (
     <div className="header">
@@ -19,6 +24,14 @@ export const Header = ({
         <MdOutlineSettings />
       </Button>
       <div>
+        <Button
+          className="icon-btn"
+          onClick={() => {
+            setMoreProjectModalStatus(true);
+          }}
+        >
+          <MdOutlineManageSearch />
+        </Button>
         <Button
           type="default"
           onClick={() => {
