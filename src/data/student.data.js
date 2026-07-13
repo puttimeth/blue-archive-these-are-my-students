@@ -2884,7 +2884,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "โคยูกิ (ชุดนอน)",
-    isJpOnly: true,
   },
   20057: {
     defaultOrder: 256,
