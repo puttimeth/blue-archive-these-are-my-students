@@ -2920,7 +2920,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "อาคาเนะ (ชุดนักเรียน)",
-    isJpOnly: true,
   },
   20058: {
     defaultOrder: 260,
