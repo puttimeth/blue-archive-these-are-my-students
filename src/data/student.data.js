@@ -1674,7 +1674,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "โคโนกะ",
-    isJpOnly: true,
   },
   10138: {
     defaultOrder: 255,
@@ -1687,7 +1686,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "เรนะ",
-    isJpOnly: true,
   },
   10139: {
     defaultOrder: 257,
