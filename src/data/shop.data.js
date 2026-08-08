@@ -7,7 +7,7 @@ export const shopDataJp = {
   // prettier-ignore
   "Arena": new Set(["10038", "10039", "20002", "20003", "23001", "23004", "23006"]),
   // prettier-ignore
-  "Joint Firing Drill": new Set(["10001", "10012", "10013", "20010"]),
+  "Joint Firing Drill": new Set(["10001", "10012", "10013", "10040", "20010"]),
 };
 
 export const shopDataGlobal = {
