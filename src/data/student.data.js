@@ -1698,7 +1698,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Unique",
     nameTh: "นิโกะ",
-    isJpOnly: true,
   },
   10140: {
     defaultOrder: 258,
@@ -1711,7 +1710,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Unique",
     nameTh: "คุรุมิ",
-    isJpOnly: true,
   },
   10141: {
     defaultOrder: 261,
@@ -2261,7 +2259,6 @@ export const studentData = {
     armorType: "Unarmed",
     availability: "Event",
     nameTh: "โอโทกิ",
-    isJpOnly: true,
   },
   20000: {
     defaultOrder: 30,
