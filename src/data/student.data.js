@@ -1722,7 +1722,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "ฮารุกะ (เดรส)",
-    isJpOnly: true,
   },
   10142: {
     defaultOrder: 263,
@@ -2968,7 +2967,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "เอริกะ",
-    isJpOnly: true,
   },
   20059: {
     defaultOrder: 262,
@@ -2981,7 +2979,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Regular",
     nameTh: "มุสึกิ (เดรส)",
-    isJpOnly: true,
   },
   20060: {
     defaultOrder: 271,
