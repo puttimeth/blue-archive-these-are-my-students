@@ -2996,6 +2996,19 @@ export const studentData = {
     nameTh: "อิบูกิ (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
+  20061: {
+    defaultOrder: 274,
+    nameEn: "Kasumi (Swimsuit)",
+    school: "Gehenna",
+    defaultStar: 3,
+    squadType: "Support",
+    tacticRole: "Supporter",
+    bulletType: "Pierce",
+    armorType: "Unarmed",
+    availability: "Regular",
+    nameTh: "คาสุมิ (ชุดว่ายน้ำ)",
+    isJpOnly: true,
+  },
   23000: {
     defaultOrder: 33,
     nameEn: "Airi",
@@ -3584,4 +3597,5 @@ export const studentDefaultOrderSortData = [
   "20060",
   "10149",
   "10150",
+  "20061",
 ];
