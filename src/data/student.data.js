@@ -1734,7 +1734,6 @@ export const studentData = {
     armorType: "HeavyArmor",
     availability: "Regular",
     nameTh: "นางุสะ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10143: {
     defaultOrder: 264,
