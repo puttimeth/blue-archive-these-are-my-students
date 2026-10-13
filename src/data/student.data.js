@@ -1746,7 +1746,6 @@ export const studentData = {
     armorType: "LightArmor",
     availability: "Regular",
     nameTh: "ชุน (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10145: {
     defaultOrder: 266,
@@ -1759,7 +1758,6 @@ export const studentData = {
     armorType: "ElasticArmor",
     availability: "Regular",
     nameTh: "คิซากิ (ชุดว่ายน้ำ)",
-    isJpOnly: true,
   },
   10146: {
     defaultOrder: 267,
