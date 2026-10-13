@@ -1839,6 +1839,19 @@ export const studentData = {
     nameTh: "อันนะ",
     isJpOnly: true,
   },
+  10152: {
+    defaultOrder: 277,
+    nameEn: "Tsumugi",
+    school: "WildHunt",
+    defaultStar: 3,
+    squadType: "Main",
+    tacticRole: "Tanker",
+    bulletType: "Pierce",
+    armorType: "Unarmed",
+    availability: "Regular",
+    nameTh: "สึมุกิ",
+    isJpOnly: true,
+  },
   13000: {
     defaultOrder: 14,
     nameEn: "Akane",
@@ -3622,4 +3635,5 @@ export const studentDefaultOrderSortData = [
   "20061",
   "10151",
   "20062",
+  "10152",
 ];
