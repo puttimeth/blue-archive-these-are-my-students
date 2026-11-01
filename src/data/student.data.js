@@ -1850,6 +1850,19 @@ export const studentData = {
     nameTh: "สึมุกิ",
     isJpOnly: true,
   },
+  10153: {
+    defaultOrder: 278,
+    nameEn: "Hifumi (Racing)",
+    school: "Trinity",
+    defaultStar: 3,
+    squadType: "Main",
+    tacticRole: "DamageDealer",
+    bulletType: "Explosion",
+    armorType: "Unarmed",
+    availability: "Unique",
+    nameTh: "ฮิฟุมิ (นักแข่ง)",
+    isJpOnly: true,
+  },
   13000: {
     defaultOrder: 14,
     nameEn: "Akane",
@@ -3042,6 +3055,19 @@ export const studentData = {
     nameTh: "เอรินะ",
     isJpOnly: true,
   },
+  20063: {
+    defaultOrder: 279,
+    nameEn: "Azusa (Racing)",
+    school: "Trinity",
+    defaultStar: 3,
+    squadType: "Support",
+    tacticRole: "Supporter",
+    bulletType: "Explosion",
+    armorType: "Unarmed",
+    availability: "Unique",
+    nameTh: "อาซึสะ (นักแข่ง)",
+    isJpOnly: true,
+  },
   23000: {
     defaultOrder: 33,
     nameEn: "Airi",
@@ -3355,6 +3381,19 @@ export const studentData = {
     nameTh: "จิอากิ (ชุดว่ายน้ำ)",
     isJpOnly: true,
   },
+  26017: {
+    defaultOrder: 280,
+    nameEn: "Rana",
+    school: "RedWinter",
+    defaultStar: 1,
+    squadType: "Support",
+    tacticRole: "Vehicle",
+    bulletType: "Explosion",
+    armorType: "Unarmed",
+    availability: "Event",
+    nameTh: "รานะ",
+    isJpOnly: true,
+  },
 };
 
 export const studentDefaultOrderSortData = [
@@ -3634,4 +3673,7 @@ export const studentDefaultOrderSortData = [
   "10151",
   "20062",
   "10152",
+  "10153",
+  "20063",
+  "26017",
 ];
