@@ -1,13 +1,15 @@
 // key of jp and global must be the same
 export const shopDataJp = {
   // prettier-ignore
-  "Raid boss": new Set(["10007", "10016", "10019", "10020", "13000", "13011", "20009", "20013", "23002", "23007", "26000", "26001"]),
+  "Raid boss": new Set(["10007", "10016", "10019", "10020", "13000", "13011", "20009", "20013", "20014", "23002", "23007", "26000", "26001"]),
   // prettier-ignore
   "Grand Raid boss": new Set(["10018", "10024", "10028", "10029", "10034", "10043", "20011", "20012", "20015", "20017"]),
   // prettier-ignore
   "Arena": new Set(["10038", "10039", "20002", "20003", "23001", "23004", "23006"]),
   // prettier-ignore
   "Joint Firing Drill": new Set(["10001", "10012", "10013", "10040", "20010"]),
+  // prettier-ignore
+  "Bounty": new Set(["16005", "16006", "16007", "16008", "16009", "16010", "16011", "16012", "16013", "16014", "16015", "16019", "16020", "26006", "26007", "26008", "26009", "26010", "26012", "26013"]),
 };
 
 export const shopDataGlobal = {
@@ -19,4 +21,6 @@ export const shopDataGlobal = {
   "Arena": new Set(["10038", "10039", "20002", "20003", "23001", "23004", "23006"]),
   // prettier-ignore
   "Joint Firing Drill": new Set(["10001", "10012", "10013", "20010"]),
+  // prettier-ignore
+  "Bounty": new Set([]),
 };
